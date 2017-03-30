@@ -181,10 +181,35 @@ while($reg=mysql_fetch_array($registro)){ ?>
         </figcaption>
     </figure> 
 </div>
+
+
+<div id="contact" class="spacer">
+<div class="container contactform center">
+<h2 class="text-left wowload fadeInUp">¿Tienes una receta? Cuéntanos...</h2>
+  <div class="row wowload fadeInLeftBig">
+  <div class="col-sm-6 col-sm-offset-0 col-sm-12">     
+  <form method="POST" action="index.php">
+    <input type="text" name="usuario" placeholder="Nombre">
+        <input type="text" name="receta" placeholder="Nombre de la receta">
+        <input type="text" name="imagen" placeholder="URL de imagen de la receta">
+        <select class="form-control" name="categorias">
+          <option>Plato principal</option>
+          <option>Entrada</option>
+          <option>Bebida</option>
+          <option>Postre</option>
+        </select><br>
+        <textarea class="form-control" name="ingredientes" rows="2" style="resize: none;" placeholder="Ingredientes(separados por comas)" ></textarea>
+        <textarea class="form-control" name="preparacion" rows="5" style="resize: none;" placeholder="Preparación"></textarea>
+        <button class="btn btn-primary" name="enviar">Enviar</button>
+  </form>
   </div>
-    </div>
   </div>
 </div>
+</div>
+
+
+
+
 <div class="footer text-center spacer">
 Copyright 2017 DevStudio. All rights reserved.
 </div>
