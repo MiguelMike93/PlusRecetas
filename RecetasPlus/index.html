@@ -103,7 +103,25 @@
   <div class="col-sm-6 wowload fadeInLeft">
     <h4><i class="fa fa-camera-retro"></i> ¡Hola! </h4>
     <p>Recetas plus es una aplicación diseñada para aquellos usuarios que quieren aprender a cocinar, sin necesidad de esas engorrosas recetas, que solo confunden a los usuarios.</p>
-
+     <?php
+$host = "localhost";
+$username = "root";
+$db = "epiz_19830617_recetasPlusdb";
+$pass = "";
+// Create connection
+$cont=0;
+$conn= mysql_connect($host, $username, $pass) or die("Error al buscar la infor");
+mysql_select_db($db, $conn) or die("No canciona");
+$registro=mysql_query("SELECT ID_RECETA,NOMBRE_RECETA  FROM RECETAS LIMIT 20 OFFSET 1") or die("No canciona" .mysql_error());
+while($reg=mysql_fetch_array($registro)){ ?>
+    <a href="recipe1.php?variable=<?php echo $reg['ID_RECETA']; ?>">
+      
+        <h4><?php echo $reg['NOMBRE_RECETA']; ?></h4>
+      
+    </a>
+  <?php }
+ 
+?>
 
     <p>Aquí podrás encontrar gran cantidad de recetas faciles de implementar en casa. Por otro lado podrás comentar recetas de otros usuarios y asi mismo, enviar tus propias recetas.</p> 
     
