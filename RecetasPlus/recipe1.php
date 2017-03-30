@@ -82,6 +82,7 @@
 <div id="menu"  class="container spacer about">
   <p>
 <?php
+$var=$_GET['variable'];
 $host = "sql313.epizy.com";
 $username = "epiz_19830617";
 $db = "epiz_19830617_recetasPlusdb";
@@ -89,7 +90,7 @@ $pass = "miguel1993";
 // Create connection
 $conn= mysql_connect($host, $username, $pass) or die("Error al buscar la infor");
 mysql_select_db($db, $conn) or die("No funciona");
-$registro=mysql_query("SELECT NOMBRE_RECETA,INGREDIENTE,PREPARACION,IMAGEN_RECETA FROM RECETAS where id_receta=1") or die("No funciona" .mysql_error());
+$registro=mysql_query("SELECT NOMBRE_RECETA,INGREDIENTE,PREPARACION,IMAGEN_RECETA FROM RECETAS where id_receta=".$var) or die("No canciona" .mysql_error());
 $name=$registro['NOMBRE_RECETA'];
 while($reg=mysql_fetch_array($registro)){
   //echo $reg['NOMBRE_RECETA'];
@@ -99,6 +100,11 @@ while($reg=mysql_fetch_array($registro)){
   $imagen=$reg['IMAGEN_RECETA'];
 }
 ?>
+ <?php
+  
+  echo '<h2>'.$name.'</h2>';
+  
+  ?>
   
   </p>
   <div class="row">
