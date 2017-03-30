@@ -28,41 +28,13 @@
   <link rel="stylesheet" href="assets/style.css">
   <script src="js/jquery-3.1.1.min.js" type="text/javascript"></script> 
 </head>
+
 <body class="recipe-body">
-<script type="text/javascript">
-    function sendReceta(num){
-      var a=num;
-      var cadena = $.getJSON("recipe.json", function (data) {
-       
-                    
-                
-                   $("#title").html(data.recetas.receta[a].nombre);
-                   $("#nombre").html(data.recetas.receta[a].nombre);
-                   $("#uno").html(data.recetas.receta[a].ingredientes[0]);
-                   $("#dos").html(data.recetas.receta[a].ingredientes[1]);
-                   $("#tres").html(data.recetas.receta[a].ingredientes[2]);
-                   $("#cuatro").html(data.recetas.receta[a].ingredientes[3]);
-                   $("#cinco").html(data.recetas.receta[a].ingredientes[4]);
-                   $("#seis").html(data.recetas.receta[a].ingredientes[5]);
-                   $("#preparacion").html(data.recetas.receta[a].preparacion);
 
-               })     
-    }
-
-       $(document).ready(function() {
-           
-               sendReceta(2);
-         
-       });
-  </script>     
+  
+                   
   <div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v2.8";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>         
+         
 <div class="topbar animated fadeInLeftBig"></div>
 
 <!-- Header Starts -->
@@ -73,7 +45,7 @@
           <div class="container">
             <div class="navbar-header">
               <!-- Logo Starts -->
-              <a class="navbar-brand" href="index.html"><img src="images/Logo.png" alt="logo"></a>
+              <a class="navbar-brand" href="index.php"><img src="images/Logo.png" alt="logo"></a>
               <!-- #Logo Ends -->
 
 
@@ -108,26 +80,55 @@
 
 
 <div id="menu"  class="container spacer about">
-<h2 class="text-left wowload fadeInUp" id="nombre"> </h2>  
+  <p>
+<?php
+$var=$_GET['variable'];
+$host = "sql313.epizy.com";
+$username = "epiz_19830617";
+$db = "epiz_19830617_recetasPlusdb";
+$pass = "miguel1993";
+// Create connection
+$conn= mysql_connect($host, $username, $pass) or die("Error al buscar la infor");
+mysql_select_db($db, $conn) or die("No funciona");
+$registro=mysql_query("SELECT NOMBRE_RECETA,INGREDIENTE,PREPARACION,IMAGEN_RECETA FROM RECETAS where id_receta=".$var) or die("No canciona" .mysql_error());
+$name=$registro['NOMBRE_RECETA'];
+while($reg=mysql_fetch_array($registro)){
+  //echo $reg['NOMBRE_RECETA'];
+  $name=$reg['NOMBRE_RECETA'];
+  $Ingredientes=$reg['INGREDIENTE'];
+  $preparacion=$reg['PREPARACION'];
+  $imagen=$reg['IMAGEN_RECETA'];
+}
+?>
+ <?php
+  
+  echo '<h2>'.$name.'</h2>';
+  
+  ?>
+  
+  </p>
   <div class="row">
   <div class="col-sm-6 wowload fadeInLeft">
-  <div class="image_block" id="image"> <img src="images/portfolio/3.jpg" alt="logo"></div>
+  <div class="image_block" id="image"> <img src=<?php echo $imagen;?> alt="logo"></div>
    <h2>Ingredientes </h2>
       <nav>
       <ul>
-        <li id="uno"></li>
-        <li id="dos"></li>
-        <li id="tres"></li>
-        <li id="cuatro"></li>
-        <li id="cinco"></li>
-        <li id="seis"></li>
-      </ul>
+        <li id="uno">
+          <?php 
+          echo '<p>'.$Ingredientes.'</p>';
+          ?>
+        </li>
+        </ul>
       </nav>
     <h2><i class="fa fa-camera-retro"></i> Preparación</h2>
-    <p id="preparacion" >---- </p>
+    <p id="preparacion" >
+     <?php 
+          echo '<p>'.$preparacion.'</p>';
+          ?>
+        </p>
   </div>
 </div>
-<div class="fb-comments" data-href="http://recetas.epizy.com/recipe3.html" data-numposts="5"></div>
+<div class="fb-comments" data-href="http://recetas.epizy.com/recipe1.html" data-numposts="5"></div>
 </div>
 
 
@@ -137,6 +138,5 @@
   Copyright 2017 DevStudio. All rights reserved.
   </div>
   <!-- # Footer Ends -->
-  
 </body>
 </html>
