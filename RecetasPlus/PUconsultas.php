@@ -4,7 +4,7 @@ class PUConexion extends TestCase{
   
     public function testHost() {
     
-        $d = new DataDB();
+        $d = new DataDb();
         
     $expect = 'localhost';
         $actual = $d->getHost();
