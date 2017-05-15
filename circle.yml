@@ -18,7 +18,7 @@
   test:
     override:
     - dir -a
-    - phpunit PUConsultas.php
+    - phpunit PUconsultas.php
 #    - phpunit Test/PUConexion.php
 #    - phpunit Test/PUDataDB.php
 
