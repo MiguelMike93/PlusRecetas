@@ -1,5 +1,6 @@
 <?php
 use PHPUnit\Framework\TestCase;
+include_once 'DataDb.php';
 class PUConexion extends TestCase{
   
     public function testHost() {
