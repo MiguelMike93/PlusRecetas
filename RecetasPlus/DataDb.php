@@ -5,7 +5,7 @@
 	$_DB = "epiz_19830617_recetasPlusdb";
 	$_PASS = "miguel1993";
 	*/
-	class DataDB{
+	class DataDb{
 		
 		private $host;	
 		private $username;
