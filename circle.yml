@@ -1,6 +1,3 @@
-general:
-    build_dir: RecetasPlus
-
   machine:
     php:
      version: 7.0.11
