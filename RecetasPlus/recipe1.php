@@ -84,10 +84,10 @@
   <p>
 <?php
 $var=$_GET['variable'];
-$host = "sql313.epizy.com";
-$username = "epiz_19830617";
-$db = "epiz_19830617_recetasPlusdb";
-$pass = "miguel1993";
+   $host = "sql313.epizy.com";
+    $username = "epiz_19830617";
+    $db = "epiz_19830617_recetasPlusdb";
+    $pass = "miguel1993";
 // Create connection
 $conn= mysql_connect($host, $username, $pass) or die("Error al buscar la infor");
 mysql_select_db($db, $conn) or die("No funciona");
@@ -128,26 +128,52 @@ while($reg=mysql_fetch_array($registro)){
           ?>
         </p>
   </div>
-</div>
+
 <div id="comentarios">
-<form id="contact_form" action="coments.php" method="POST" enctype="multipart/form-data">
+<form id="contact_form" action="coments.php" method="POST">
   <div class="row">
-    <label for="name"><h3>Deja aquí tu comentario</h3></label><br />
-    <label for="name">Tu nombre:</label><br />
-    <input id="name" class="input" name="usuario" type="text" value="" size="30" /><br />
+    <label for="enunciado"><h3>Deja aquí tu comentario</h3></label><br />
+    <label for="etiqueta_nombre">Tu nombre:</label><br />
+    <input id="name" class="input" name="Comentario[usuario]" type="text" value="" size="30" /><br />
 <!--<input id="id" type="hidden" name="idreceta" value=1>-->
-  <input id="name" class="input" type="hidden" name="idreceta" type="text" value=".$id." size="30" />
+    <input id="receta" class="input" type="hidden" name="Comentario[receta]" value="<?php echo (isset($_GET['variable']))?$_GET['variable']:'' ?>" />
     <label for="message">Tu mensaje:</label><br />
-    <textarea id="com" class="input" name="descripcion" cols="28" rows="10"></textarea>
+    <textarea id="com" class="input" name="Comentario[descripcion]" cols="28" rows="10"></textarea>
    
   </div>
   <input id="submit_button" type="submit" name="enviar" value="Enviar" />
 </form>
+   <?php
+$var=$_GET['variable'];
+   $host = "sql313.epizy.com";
+    $username = "epiz_19830617";
+    $db = "epiz_19830617_recetasPlusdb";
+    $pass = "miguel1993";
+// Create connection
+$conn= mysql_connect($host, $username, $pass) or die("Error al buscar la infor");
+mysql_select_db($db, $conn) or die("No canciona");
+$registro=mysql_query("SELECT NOMBRE_USUARIO, DESCRIPCION FROM COMENTARIOS where id_receta=".$var) or die("No funnciona" .mysql_error());
+while($reg=mysql_fetch_array($registro)){
+  $name=$reg['NOMBRE_USUARIO'];
+  $descripcion=$reg['DESCRIPCION'];
+  ?>
+  <div class="receta">
+   <!-- <h2 class="usuario_nombre"><?php echo $name; ?> Comentó</h2>-->
+    <label for="usuario_nombre"><?php echo $name; ?> comentó</label><br />
+    <label for="comentario_desc"><?php echo $descripcion; ?></label><br />
+    <hr>
+     
+  <!--  <h4 class="receta_descripcion"><?php echo $descripcion; ?></h4>-->
+  </div>
+<?php } ?>
+<br />
 </div>
 <div class="fb-comments" data-href="http://recetas.epizy.com/recipe1.html" data-numposts="5"></div>
 </div>
+</div>
 
- 
+
+
   <!-- Footer Starts -->
   <div class="footer text-center spacer">
   

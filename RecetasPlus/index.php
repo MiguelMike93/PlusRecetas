@@ -60,10 +60,10 @@
             <div class="navbar-collapse  collapse">
               <ul class="nav navbar-nav navbar-right scroll">
                  <li class="active"><a href="#home">Inicio</a></li>
-                 <li ><a href="#menu">Menú</a></li>
+                 <li ><a href="#menu">Recetas nuevas</a></li>
                  <li ><a href="#foods">Recetas</a></li>
                  <!--<li ><a href="#partners">Partners</a></li>-->
-                 <!--<li ><a href="#contact">Contact</a></li>-->
+                 <li ><a href="#contact">Envía tu receta</a></li>
               </ul>
             </div>
             <!-- #Nav Ends -->
@@ -101,30 +101,37 @@
 <h2 class="text-center wowload fadeInUp">RecetasPlus</h2>  
   <div class="row">
   <div class="col-sm-6 wowload fadeInLeft">
-    <h2><i class="fa fa-camera-retro"></i> Recetas nuevas </h2>
-   
-     <?php
-$host = "localhost";
-$username = "root";
-$db = "epiz_19830617_recetasPlusdb";
-$pass = "";
-// Create connection
-$cont=0;
-$conn= mysql_connect($host, $username, $pass) or die("Error al buscar la infor");
-mysql_select_db($db, $conn) or die("No canciona");
-$registro=mysql_query("SELECT ID_RECETA,NOMBRE_RECETA  FROM RECETAS LIMIT 20 OFFSET 6") or die("No canciona" .mysql_error());
-while($reg=mysql_fetch_array($registro)){ ?>
-    <a href="recipe1.php?variable=<?php echo $reg['ID_RECETA']; ?>">
-      
-        <h4><?php echo $reg['NOMBRE_RECETA']; ?></h4>
-      
-    </a>
-  <?php }
- 
-?>
+    <h4><i class="fa fa-camera-retro"></i> Recetas Nuevas </h4>
+    <?php
+       $host = "sql313.epizy.com";
+    $username = "epiz_19830617";
+    $db = "epiz_19830617_recetasPlusdb";
+    $pass = "miguel1993";
+    // Create connection
+    $cont=0;
+    $conn= mysql_connect($host, $username, $pass) or die("Error al buscar la infor");
+    mysql_select_db($db, $conn) or die("No canciona");
+    $registro=mysql_query("SELECT ID_RECETA,NOMBRE_RECETA FROM RECETAS LIMIT 20 OFFSET 4") or die("No canciona" .mysql_error());
+    while($reg=mysql_fetch_array($registro)){ ?>
+        <a href="recipe1.php?variable=<?php echo $reg['ID_RECETA']; ?>">
+          <p>
+            <h4><?php echo $reg['NOMBRE_RECETA']; ?></h4>
+          </p>
+        </a>
+    <?php }
+    mysql_close($conn);
+    ?>  
+
   </div>
-    </div>
-  </div>  
+ 
+      <!-- menus -->
+
+
+
+  </div>
+  </div>
+
+  
 </div>
 <!-- #Cirlce Ends -->
 
@@ -136,7 +143,10 @@ while($reg=mysql_fetch_array($registro)){ ?>
         <figcaption>
             <h2>Mojito de Naranja</h2>
             <p>¿Te interesa? Síguenos...<br>
-            <a href="recipe1.html">Ver más</a></p>            
+              <?php
+              $var="holiii";
+              ?>
+            <a href="recipe1.php?variable=1">Ver más </a></p>            
         </figcaption>
     </figure>
      <figure class="effect-oscar  wowload fadeInUp">
@@ -144,7 +154,7 @@ while($reg=mysql_fetch_array($registro)){ ?>
         <figcaption>
             <h2>Alitas de Pollo</h2>
             <p>¿Te interesa? Síguenos...<br>
-            <a href="recipe2.html">Ver más</a></p> 
+            <a href="recipe1.php?variable=2">Ver más</a></p> 
         </figcaption>
     </figure>
      <figure class="effect-oscar  wowload fadeInUp">
@@ -152,7 +162,7 @@ while($reg=mysql_fetch_array($registro)){ ?>
         <figcaption>
             <h2>Filetes Rusos</h2>
             <p>¿Te interesa? Síguenos...<br>
-            <a href="recipe3.html">Ver más</a></p> 
+            <a href="recipe1.php?variable=3">Ver más</a></p> 
         </figcaption>
     </figure>
      <figure class="effect-oscar  wowload fadeInUp">
@@ -160,7 +170,7 @@ while($reg=mysql_fetch_array($registro)){ ?>
         <figcaption>
             <h2>Cheesecake de pasión</h2>
             <p>¿Te interesa? Síguenos...<br>
-            <a href="recipe4.html">Ver más</a></p> 
+            <a href="recipe1.php?variable=4">Ver más</a></p> 
         </figcaption>
     </figure>
      
@@ -169,7 +179,7 @@ while($reg=mysql_fetch_array($registro)){ ?>
         <figcaption>
             <h2>Lomo al Horno</h2>
             <p>¿Te interesa? Síguenos...<br>
-            <a href="recipe5.html">Ver más</a></p> 
+            <a href="recipe1.php?variable=5">Ver más</a></p> 
         </figcaption>
     </figure>
     <figure class="effect-oscar  wowload fadeInUp">
@@ -177,73 +187,50 @@ while($reg=mysql_fetch_array($registro)){ ?>
         <figcaption>
             <h2>Rollitos de pollo</h2>
             <p>¿Te interesa? Síguenos...<br>
-            <a href="recipe6.html">Ver más</a></p> 
+            <a href="recipe1.php?variable=6">Ver más</a></p> 
         </figcaption>
-    </figure> 
+    </figure>   
 </div>
 
+<!--Contact Starts-->
 
 <div id="contact" class="spacer">
 <div class="container contactform center">
 <h2 class="text-left wowload fadeInUp">¿Tienes una receta? Cuéntanos...</h2>
   <div class="row wowload fadeInLeftBig">
   <div class="col-sm-6 col-sm-offset-0 col-sm-12">     
-  <form method="POST" action="index.php">
-    <input type="text" name="usuario" placeholder="Nombre">
-        <input type="text" name="receta" placeholder="Nombre de la receta">
-        <input type="text" name="imagen" placeholder="URL de imagen de la receta">
+  <form method="POST" action="form.php">
+        <input type="text" pattern="^[a-zA-Z\s]*$" name="usuario" placeholder="Nombre" required>
+        <input type="text" pattern="^[a-zA-Z\s]*$" name="receta" placeholder="Nombre de la receta" required>
+        <input type="text" name="imagen" placeholder="URL de imagen de la receta" required>
         <select class="form-control" name="categorias">
           <option>Plato principal</option>
           <option>Entrada</option>
           <option>Bebida</option>
           <option>Postre</option>
         </select><br>
-        <textarea class="form-control" name="ingredientes" rows="2" style="resize: none;" placeholder="Ingredientes(separados por comas)" ></textarea>
-        <textarea class="form-control" name="preparacion" rows="5" style="resize: none;" placeholder="Preparación"></textarea>
+        <textarea class="form-control" name="ingredientes" rows="2" style="resize: none;" placeholder="Ingredientes(separados por comas)" required></textarea>
+        <textarea class="form-control" name="preparacion" rows="5" style="resize: none;" placeholder="Preparación" required></textarea>
         <button class="btn btn-primary" name="enviar">Enviar</button>
   </form>
   </div>
   </div>
 </div>
 </div>
+<!--Contact Ends-->
 
-<?php
-	if (isset($_POST['enviar'])) {	
-		$host = "sql313.epizy.com";
-		$username = "epiz_19830617";
-		$db = "epiz_19830617_recetasPlusdb";
-		$pass = "miguel1993";
-		// Create connection
-		$conn= mysql_connect($host, $username, $pass) or die("Error en la conexion");
-		mysql_select_db($db, $conn) or die("Base de datos sin seleccionar");
-	 	$usuario = $_POST['usuario'];
-	 	$receta = $_POST['receta'];
-	 	$imagen = $_POST['imagen'];
-	 	$categoria = $_POST['categorias'];
-	 	$ingredientes = $_POST['ingredientes'];
-	 	$preparacion = $_POST['preparacion'];
-
-	 	$sqlqueryuser = "INSERT INTO USUARIOS (NOMBRE_USUARIO) VALUES('$usuario')";
-	 	$sqlqueryreceta = "INSERT INTO RECETAS (NOMBRE_RECETA,INGREDIENTE,IMAGEN_RECETA,PREPARACION,TIPO_RECETA) VALUES ('$receta','$ingredientes','$imagen','$preparacion','$categoria')";
-		$insertarReceta = mysql_query($sqlqueryreceta);
-		$insertarUsuario = mysql_query($sqlqueryuser);
-		if (!$insertarReceta) {
-			$mensaje = mysql_error();
-			die($mensaje);
-		}if (!$insertarUsuario) {
-			$mensaje2 = mysql_error();
-			die($mensaje2);
-		}
-	 } 
-?>
-
-
-
+<!-- Footer Starts -->
 <div class="footer text-center spacer">
+
 Copyright 2017 DevStudio. All rights reserved.
 </div>
 <!-- # Footer Ends -->
 <a href="#home" class="gototop "><i class="fa fa-angle-up  fa-3x"></i></a>
+
+
+
+
+
 <!-- The Bootstrap Image Gallery lightbox, should be a child element of the document body -->
 <div id="blueimp-gallery" class="blueimp-gallery blueimp-gallery-controls">
     <!-- The container for the modal slides -->
