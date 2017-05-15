@@ -1,0 +1,89 @@
+
+
+
+#reply {
+  position: absolute;
+  left : 390px;
+  top  : 285px;
+}
+
+#message {
+  position: absolute;
+  left : 20px;
+  top  : 70px;
+}
+div#comentarios{
+float: right;
+background-color: rgba(206,195,195,0.5);
+width: 300px;
+height: 500px;
+}
+form { 
+	margin-top: 20px
+	margin-left:10px;
+	padding: 30px; 
+	width: 300px; 
+	
+} 
+label { 
+	font-weight: 900;
+	font-family:monospace, Arial, Helvetica, sans-serif; 
+	color: black; display: block; 
+ } 
+#row { width: 294px; height: 193px; }
+
+
+#submit_button { width: 88px; height: 27px; margin-left: 80px;
+ background: #827B7D; 
+ border: 1px Solid #827B7D; ; 
+ 
+}
+input, textarea {
+  background   : rgba(0,0,0,.1);
+  border-radius: 5px;
+  outline      : none;
+  border: 1px solid #333
+}
+input {
+    height: 2.0em; /* for IE */
+    vertical-align: middle; /* This is optional but it makes legacy IEs look better */
+}
+textarea {
+ 
+  padding : 10px;
+  margin  : 10px 0 0 -10px;
+ 
+
+ 
+}
+button {
+  position     : absolute;
+  left         : 440px;
+  top          : 360px;
+
+  padding      : 5px;
+
+  font         : bold .6em sans-serif;
+  border       : 2px solid #333;
+  border-radius: 5px;
+  background   : none;
+
+  cursor       : pointer;
+
+-webkit-transform: rotate(-1.5deg);
+   -moz-transform: rotate(-1.5deg);
+    -ms-transform: rotate(-1.5deg);
+     -o-transform: rotate(-1.5deg);
+        transform: rotate(-1.5deg);
+}
+
+button:after {
+  content: " >>>";
+}
+
+button:hover,
+button:focus {
+  outline   : none;
+  background: #000;
+  color   : #FFF;
+}

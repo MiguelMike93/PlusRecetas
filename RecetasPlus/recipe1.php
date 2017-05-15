@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <link rel="stylesheet" href="./estilos.css" type="text/css" media="all" />
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
   <title id="title">Nombre Receta</title>
 
@@ -128,10 +129,25 @@ while($reg=mysql_fetch_array($registro)){
         </p>
   </div>
 </div>
+<div id="comentarios">
+<form id="contact_form" action="coments.php" method="POST" enctype="multipart/form-data">
+  <div class="row">
+    <label for="name"><h3>Deja aquí tu comentario</h3></label><br />
+    <label for="name">Tu nombre:</label><br />
+    <input id="name" class="input" name="usuario" type="text" value="" size="30" /><br />
+<!--<input id="id" type="hidden" name="idreceta" value=1>-->
+  <input id="name" class="input" type="hidden" name="idreceta" type="text" value=".$id." size="30" />
+    <label for="message">Tu mensaje:</label><br />
+    <textarea id="com" class="input" name="descripcion" cols="28" rows="10"></textarea>
+   
+  </div>
+  <input id="submit_button" type="submit" name="enviar" value="Enviar" />
+</form>
+</div>
 <div class="fb-comments" data-href="http://recetas.epizy.com/recipe1.html" data-numposts="5"></div>
 </div>
 
-
+ 
   <!-- Footer Starts -->
   <div class="footer text-center spacer">
   
