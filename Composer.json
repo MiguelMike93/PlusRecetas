@@ -1,0 +1,46 @@
+{
+	"name" : "MiguelMike93/PlusRecetas",
+	"description" : "A PHPUnit functions",
+	"type" : "application",
+	"authors" : [{
+			"name" : "Miguel Angel Beltran",
+			"email" : "miguel.beltran01@uptc.edu.co",
+			"homepage" : https://github.com/MiguelMike93"
+		}
+	],
+	"keywords" : [
+		"phpunit"
+	],
+	"homepage" : "https://github.com/MiguelMike93/PlusRecetas",
+	"license" : "BSD-3-Clause-Clear",
+	"require" : {
+		"php" : ">=5.6",
+		"ext-pdo_sqlite" : "*",
+		"symfony/console" : "~3.2.1@stable",
+		"phpunit/phpunit" : "~5.7.3@stable",
+		"silex/silex" : "~2.0@stable",
+		"jdesrosiers/silex-cors-provider" : "~1.0@stable",
+		"symfony/finder" : "~3.1@stable",
+		"doctrine/dbal" : "~2.5@stable"
+	},
+	"minimum-stability" : "stable",
+	"support" : {
+		"source" : "https://github.com/MiguelMike93/PlusRecetas",
+		"issues" : "https://github.com/MiguelMike93/PlusRecetas/issues"
+	},
+	"config" : {
+		"bin-dir" : "bin/",
+		"vendor-dir" : "vendor/"
+	},
+	"autoload" : {
+		"psr-4" : {
+			"" : "RecetasPlus"
+		}
+	},
+	"require-dev" : {
+		"ext-mbstring" : "*"
+	},
+	"suggest" : {
+		"phpunit/dbunit" : "The DbUnit extension considerably simplifies the setup of a database for testing"
+	}
+}
