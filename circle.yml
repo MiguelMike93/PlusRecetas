@@ -17,7 +17,7 @@
 
   test:
     override:
-    - phpunit PUConsultas.php
+    - phpunit RecetasPlus/PUConsultas.php
 #    - phpunit Test/PUConexion.php
 #    - phpunit Test/PUDataDB.php
 
