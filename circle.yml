@@ -17,10 +17,8 @@
 
   test:
     override:
-    - phpunit --version
-    - phpunit
     - dir -a
-    - phpunit ./RecetasPlus/PUConsultas.php
+    - phpunit PUConsultas.php
 #    - phpunit Test/PUConexion.php
 #    - phpunit Test/PUDataDB.php
 
