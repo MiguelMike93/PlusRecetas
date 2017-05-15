@@ -1,7 +1,7 @@
 <?php
 namespace Test;
 use PHPUnit\Framework\TestCase;
-include_once 'DataDb.php';
+include_once 'RecetasPlus/DataDb.php';
 /*require_once 'PHPUnit/Autoload.php';*/
 class PUConexion extends PHPUnit_Framework_TestCase{
   
