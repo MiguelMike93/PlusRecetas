@@ -112,13 +112,16 @@ while($reg=mysql_fetch_array($registro)){
   <div class="col-sm-6 wowload fadeInLeft">
   <div class="image_block" id="image"> <img src=<?php echo $imagen;?> alt="logo"></div>
    <h2>Ingredientes </h2>
-      <nav>
+       <nav>
       <ul>
-        <li id="uno">
+        
           <?php 
-          echo '<p>'.$Ingredientes.'</p>';
+          $arrayNombre = explode(",", $Ingredientes);
+          foreach ($arrayNombre as &$valor) {
+           echo '<li>'.$valor.'</li>';
+          }
           ?>
-        </li>
+        
         </ul>
       </nav>
     <h2><i class="fa fa-camera-retro"></i> Preparación</h2>
@@ -158,12 +161,10 @@ while($reg=mysql_fetch_array($registro)){
   $descripcion=$reg['DESCRIPCION'];
   ?>
   <div class="receta">
-   <!-- <h2 class="usuario_nombre"><?php echo $name; ?> Comentó</h2>-->
     <label for="usuario_nombre"><?php echo $name; ?> comentó</label><br />
     <label for="comentario_desc"><?php echo $descripcion; ?></label><br />
     <hr>
      
-  <!--  <h4 class="receta_descripcion"><?php echo $descripcion; ?></h4>-->
   </div>
 <?php } ?>
 <br />
