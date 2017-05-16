@@ -30,7 +30,7 @@
     production: 
       branch: Development
       commands: 
-     - ls -al ~/.ssh
+      - ls -al ~/.ssh
       - cat  ~/.ssh/id_heroku.com
       - cat  ~/.ssh/id_heroku.com.pub
       #- git clone https://github.com/MiguelMike93/PlusRecetas.git
