@@ -13,13 +13,24 @@ script:
     - './vendor/bin/phpunit RecetasPlus/PruebasTest.php'
 
 after_success:
-  - git clone git:repositoryname --branch otherbranch
-  - git checkout -b master
+  #- git clone git:repositoryname --branch otherbranch
+  #- git checkout -b master
+  #- cd RecetasPlus
+  #- git config --global user.email "miguel.beltran01@uptc.edu.co"
+  #- git config --global user.name "MiguelMike93"
+  #- git commit -m "integracion con travis ci"
+  #- git checkout -b master
+  #- git reset --hard origin/master
+  #- git merge origin/Desarrollo -m "Update to deploy"
+  #- git remote set-url origin https://$USER:$PASS@github.com/MiguelMike93/PlusRecetas.git
+  #- git push origin master
+  - git clone https://github.com/MiguelMike93/PlusRecetas.git
   - cd RecetasPlus
-  - git config --global user.email "miguel.beltran01@uptc.edu.co"
-  - git config --global user.name "MiguelMike93"
-  - git commit -m "integracion con travis ci"
-  - git merge origin/Desarrollo -m "Update to deploy"
+  - git config --global user.email $EMAIL
+  - git config --global user.name $USER
+  - git commit -m "Integración3 desde Travis CI"
+  - git merge origin/Desarrollo -m "Integración3 desde Travis CI"
+  - git add .
   - git remote set-url origin https://$USER:$PASS@github.com/MiguelMike93/PlusRecetas.git
   - git push origin master
 
