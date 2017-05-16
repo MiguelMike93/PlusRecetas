@@ -37,10 +37,11 @@
      # - git checkout master
     # - git branch
       #- git reset --hard origin/master
-      - git merge origin/Development -m "Integracion2 desde Circle CI"
+      - git merge origin/Development -m "Integracion3 desde Circle CI"
       - git add .
       - git commit -m "Integracion desde Circle CI"
       - git remote set-url origin https://MiguelMike93:miguel1993@github.com/MiguelMike93/PlusRecetas.git
+      - git pull master
       - git push origin master  
       #- cat  ~/.ssh/authorized_keys
       #- cat  ~/.ssh/build_key.rsa
