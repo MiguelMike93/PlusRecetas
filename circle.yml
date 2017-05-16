@@ -31,6 +31,12 @@
       branch: Development
       commands: 
       - ls -al ~/.ssh
+      - ssh-keygen -t rsa -C "miguel.beltran01@uptc.edu.co"
+      - Generating public/private rsa key pair.
+      - Enter file in which to save the key (/home/you/.ssh/id_rsa):
+      - sudo apt-get install xclip
+      - xclip -sel clip < ~/.ssh/id_rsa
+      - heroku keys:add
       #- cat  ~/.ssh/id_heroku.com
      # - cat  ~/.ssh/id_heroku.com.pub
       #- git clone https://github.com/MiguelMike93/PlusRecetas.git
