@@ -11,7 +11,7 @@ before_script:
 
 script:
     - cd RecetasPlus
-    - phpunit RecetasPlus/PUconsultas.php
+    - phpunit PUconsultas.php
 
 after_success:
   - git clone https://github.com/MiguelMike93/PlusRecetas.git
