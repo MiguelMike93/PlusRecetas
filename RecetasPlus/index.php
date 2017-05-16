@@ -4,7 +4,11 @@
 <meta charset="UTF-8" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<<<<<<< HEAD
+<title>Recetas Plus cambio para travis</title>
+=======
 <title>RecetasPlus</title>
+>>>>>>> 2ec7fda62904269627959229e9f47221f967e04b
 
 <!-- Google fonts -->
 <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,700' rel='stylesheet' type='text/css'>
@@ -60,7 +64,11 @@
             <div class="navbar-collapse  collapse">
               <ul class="nav navbar-nav navbar-right scroll">
                  <li class="active"><a href="#home">Inicio</a></li>
+<<<<<<< HEAD
+                 <li ><a href="#menu">Recetas fresquitas</a></li>
+=======
                  <li ><a href="#menu">Recetas nuevas</a></li>
+>>>>>>> 2ec7fda62904269627959229e9f47221f967e04b
                  <li ><a href="#foods">Recetas</a></li>
                  <!--<li ><a href="#partners">Partners</a></li>-->
                  <li ><a href="#contact">Envía tu receta</a></li>
