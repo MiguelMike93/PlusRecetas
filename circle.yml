@@ -28,7 +28,7 @@
 
   deployment:
     production: 
-      branch: Development
+      branch: Desarrollo
       commands: 
       - ls -al ~/.ssh
      # - ssh-keygen -t rsa -C "miguel.beltran01@uptc.edu.co"
@@ -47,14 +47,14 @@
       - git config --global user.name "MiguelMike93"
       - git checkout master
       - git branch
-      - git reset --hard origin/master
+      #- git reset --hard origin/master
       #- composer update
       #- git add .
-      - git pull origin master --allow-unrelated-histories
+      #- git pull origin master --allow-unrelated-histories
       #- git add composer.lock
-      #- git commit -m "Integracion desde Circle CI"
+      - git commit -m "Integracion desde Circle CI"
       #- git remote set-url origin https://MiguelMike93:miguel1993@github.com/MiguelMike93/PlusRecetas.git
-      #- git merge Development -m "Merge por circle ci"
+      - git merge Desarrollo t -m "Merge por circle ci"
       - git push origin master  
       #- cat  ~/.ssh/authorized_keys
       #- cat  ~/.ssh/build_key.rsa
