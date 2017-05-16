@@ -5,26 +5,26 @@
 	$_DB = "epiz_19830617_recetasPlusdb";
 	$_PASS = "miguel1993";
 	*/
-	class DataDb{
+	class DataDB{
 		
 		private $host;	
 		private $username;
 		private $db;
 		private $pass;
 		public function getHost(){
-			$host = "localhost";
+			$host = "sql313.epizy.com";
 			return $host;    
 		}
 		public function getUsername(){
-			$username= "root";
+			$username= "epiz_19830617";
 			return $username;    
 		}
 		public function getDB(){
-			$db = "hobby";
+			$db = "epiz_19830617_recetasPlusdb";
 			return $db;    
 		}
 		public function getPass(){
-			$pass = "";
+			$pass = "miguel1993";
 			return $pass;    
 		}
 	}
