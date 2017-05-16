@@ -1,9 +1,9 @@
 <?php
+	include 'DataDb.php';
 
-	class functions {
+	class Functions {
 
-
-	function getTypesRecipes($query){
+		function getTypesRecipes($query){
 			$dataDb=new DataDb();
 			$conn = new mysqli($dataDb->getHost(),$dataDb->getUsername(),$dataDb->getPass(),$dataDb->getDB())or die("Error en la conexion");
 			$typeQuery = mysql_query('$query') or die("No canciona" .mysql_error());
@@ -20,8 +20,8 @@
 			
 			$queryUser = "INSERT INTO USUARIOS (NOMBRE_USUARIO) VALUES('$usuario')";
 			$queryRecipe = "INSERT INTO RECETAS (NOMBRE_RECETA,INGREDIENTE,IMAGEN_RECETA,PREPARACION,TIPO_RECETA) VALUES ('$receta','$ingredientes','$imagen','$preparacion','$categoria')";
-				$insertarReceta = $conn->query($queyUser);
-				$insertarUsuario = $conn->query($queryRecipe);
+				$insertarReceta = conn->query($queyUser);
+				$insertarUsuario = conn->query($queryRecipe);
 				if (!$insertarReceta) {
 					$mensaje = mysql_error();
 					die($mensaje);
@@ -45,7 +45,6 @@
 			}echo $registro;
 			return $registro;
 		}
-		
 
 	}
 ?>
