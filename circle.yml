@@ -40,10 +40,10 @@
       - git checkout master
       - git branch
       - git reset --hard origin/master
-      - composer update
+      #- composer update
       - git add .
       #- git pull origin master
-      - git add composer.lock
+      #- git add composer.lock
       #- git commit -m "Integracion desde Circle CI"
       #- git remote set-url origin https://MiguelMike93:miguel1993@github.com/MiguelMike93/PlusRecetas.git
       - git merge Development -m "Merge por circle ci"
