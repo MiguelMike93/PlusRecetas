@@ -96,45 +96,118 @@
 <!-- #Slider Ends -->
 </div>
 
-<!-- Cirlce Starts -->
+
+<!-- Recetas nuevas-->
 <div id="menu"  class="container spacer about">
-<h2 class="text-center wowload fadeInUp">RecetasPlus</h2>  
-  <div class="row">
-  <div class="col-sm-6 wowload fadeInLeft">
-    <h4><i class="fa fa-camera-retro"></i> Recetas Nuevas </h4>
-    <?php
-		$host = "sql313.epizy.com";
-		$username = "epiz_19830617";
-		$db = "epiz_19830617_recetasPlusdb";
-		$pass = "miguel1993";
-		// Create connection
-		$cont=0;
-		$conn= mysql_connect($host, $username, $pass) or die("Error al buscar la infor");
-		mysql_select_db($db, $conn) or die("No canciona");
-		$registro=mysql_query("SELECT ID_RECETA,NOMBRE_RECETA FROM RECETAS LIMIT 20 OFFSET 4") or die("No canciona" .mysql_error());
-		while($reg=mysql_fetch_array($registro)){ ?>
-		    <a href="recipe1.php?variable=<?php echo $reg['ID_RECETA']; ?>">
-		      <p>
-		        <h4><?php echo $reg['NOMBRE_RECETA']; ?></h4>
-		      </p>
-		    </a>
- 	  <?php }
- 		mysql_close($conn);
-    ?>  
+<h2 class="text-center wowload fadeInUp">Recetas Nuevas</h2>  
+<div class="row">
+    <div class="col-sm-6 wowload fadeInLeft">
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">  
+          <div class="item active animated row">
+          <div class="animated slideInLeft col-sm-12"><img src="images/portfolio/1.jpg" class="img-responsive"></div>
+            <div class="carousel-caption">
+              <h3>Nombre receta</h3>
+            </div>
+          </div>
+          <div class="item animated row">
+          <div class="animated slideInLeft col-sm-12"><img src="images/portfolio/2.jpg" class="img-responsive"></div>
+            <div class="carousel-caption">
+              <h3>Nombre receta</h3>
+            </div>
+          </div>
+          <div class="item animated row">
+          <div class="animated slideInLeft col-sm-12"><img src="images/portfolio/3.jpg" class="img-responsive"></div>
+            <div class="carousel-caption">
+              <h3>Nombre receta</h3>
+            </div>
+          </div>
+          <div class="item animated row">
+          <div class="animated slideInLeft col-sm-12"><img src="images/portfolio/1.jpg" class="img-responsive"></div>
+            <div class="carousel-caption">
+              <h3>Nombre receta</h3>
+            </div>
+          </div>
+          <div class="item animated row">
+          <div class="animated slideInLeft col-sm-12"><img src="images/portfolio/2.jpg" class="img-responsive"></div>
+            <div class="carousel-caption">
+              <h3>Nombre receta</h3>
+            </div>
+          </div>
+          <div class="item animated row">
+          <div class="animated slideInLeft col-sm-12"><img src="images/portfolio/3.jpg" class="img-responsive"></div>
+            <div class="carousel-caption">
+              <h3>Nombre receta</h3>
+            </div>
+          </div>
+        </div>
+        <!-- Indicadores-->
+        <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+        <li data-target="#myCarousel" data-slide-to="3"></li>
+        <li data-target="#myCarousel" data-slide-to="4"></li>
+        <li data-target="#myCarousel" data-slide-to="5"></li>
+        </ol>
 
+        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+          <span class="glyphicon glyphicon-chevron-left"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" data-slide="next">
+          <span class="glyphicon glyphicon-chevron-right"></span>
+          <span class="sr-only">Next</span>
+        </a>
+    </div>
   </div>
- 
-      <!-- menus -->
 
-
-
+  <!-- Categorías -->
+  <div class="col-sm-6 wowload fadeInRight">
+     <h4><i class="fa fa-bars"></i> Categorías</h4>
+      <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+  <div class="panel panel-default">
+    <div class="panel-heading" role="tab">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+         <i class="fa fa-coffee"></i> Platos Principales
+        </a>
+      </h4>
+    </div>
   </div>
+  <div class="panel panel-default">
+    <div class="panel-heading" role="tab">
+      <h4 class="panel-title">
+        <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+         <i class="fa fa-fire"></i> Entradas
+        </a>
+      </h4>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading" role="tab">
+      <h4 class="panel-title">
+        <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+         <i class="fa fa-beer"></i> Bebidas
+        </a>
+      </h4>
+    </div>
   </div>
 
-  
+  <div class="panel panel-default">
+    <div class="panel-heading" role="tab">
+      <h4 class="panel-title">
+        <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+         <i class="fa fa-spoon"></i> Postres
+        </a>
+      </h4>
+    </div>
+  </div>
+
 </div>
-<!-- #Cirlce Ends -->
-
+</div>
+</div>
+</div>
 
 <!-- works -->
 <div id="foods"  class=" clearfix grid"> 
