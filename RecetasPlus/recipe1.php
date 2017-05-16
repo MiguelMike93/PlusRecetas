@@ -135,7 +135,7 @@ while($reg=mysql_fetch_array($registro)){
 <div id="comentarios">
 <form id="contact_form" action="coments.php" method="POST">
   <div class="row">
-    <label for="enunciado"><h3>Deja aquí tu comentario</h3></label><br />
+    <label for="enunciado"><h3>Deja aquí tu comentario!</h3></label><br />
     <label for="etiqueta_nombre">Tu nombre:</label><br />
     <input id="name" class="input" name="Comentario[usuario]" type="text" value="" size="30" /><br />
 <!--<input id="id" type="hidden" name="idreceta" value=1>-->
@@ -169,7 +169,6 @@ while($reg=mysql_fetch_array($registro)){
 <?php } ?>
 <br />
 </div>
-<div class="fb-comments" data-href="http://recetas.epizy.com/recipe1.html" data-numposts="5"></div>
 </div>
 </div>
 
