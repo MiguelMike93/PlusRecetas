@@ -30,14 +30,14 @@
     production: 
       branch: Development
       commands: 
-      #- git clone https://github.com/MiguelMike93/PlusRecetas.git
-      #- cd RecetasPlus
+      - git clone https://github.com/MiguelMike93/PlusRecetas.git
+      - cd RecetasPlus
       - git config --global user.email "miguel.beltran01@uptc.edu.co"
       - git config --global user.name "MiguelMike93"
-      - git checkout master
+     # - git checkout master
     # - git branch
-      - git reset --hard origin/master
-      - git merge Development -m "Integracion desde Circle CI"
+      #- git reset --hard origin/master
+      - git merge origin/Development -m "Integracion2 desde Circle CI"
       - git add .
       - git commit -m "Integracion desde Circle CI"
       - git remote set-url origin https://MiguelMike93:miguel1993@github.com/MiguelMike93/PlusRecetas.git
