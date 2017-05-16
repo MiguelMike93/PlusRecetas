@@ -30,8 +30,8 @@
     production: 
       branch: Development
       commands: 
-      - git clone https://github.com/MiguelMike93/PlusRecetas.git
-      - cd RecetasPlus
+      #- git clone https://github.com/MiguelMike93/PlusRecetas.git
+      #- cd RecetasPlus
       - git config --global user.email "miguel.beltran01@uptc.edu.co"
       - git config --global user.name "MiguelMike93"
       - git checkout master
