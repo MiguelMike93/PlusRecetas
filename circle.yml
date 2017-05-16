@@ -39,11 +39,11 @@
       - git config --global user.name "MiguelMike93"
       - git checkout master
       - git branch
-      #- git reset --hard origin/master
+      - git reset --hard origin/master
       - composer update
       #- git merge origin/Development -m "Integracion3 desde Circle CI"
       - git add .
-      - git add composer lock 
+      - git add composer.lock 
       #- git pull origin master
       - git merge Development -m "Merge"
       - git commit -m "Integracion desde Circle CI"
