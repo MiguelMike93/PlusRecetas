@@ -5,7 +5,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
-<title>Recetas Plus</title>
+<title>Recetas Plus :D</title>
 
 <title>RecetasPlus</title>
 
@@ -95,7 +95,7 @@
               <div class="caption-info">              
               <i class="fa fa-coffee fa-5x animated bounceInDown"></i>
               <h1 class="animated bounceInUp">¡Aprende con Nosotrooos!</h1>
-              <p class="animated bounceInLeft">Miles de recetas a un solo click, ven y comparte tu experiencia con nosotros.</p>
+              <p class="animated bounceInLeft">Miles de recetas a un solo click, ven y comparte tu experiencia con nosotrooos.</p>
              <a href="#menu" class="explore animated bounceInDown"><i class="fa fa-angle-down  fa-3x"></i></a>
               </div>
             </div>
