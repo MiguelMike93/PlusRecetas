@@ -26,12 +26,12 @@ after_success:
   #- git push origin master
   - git clone https://github.com/MiguelMike93/PlusRecetas.git
   - cd RecetasPlus
-  - git config --global user.email $EMAIL_GITHUB
-  - git config --global user.name $USER_GITHUB
+  - git config --global user.email $EMAIL
+  - git config --global user.name $USER
   - git merge origin/Desarrollo -m "Integración desde Travis CI"
   - git add .
   - git commit -m "Integración desde Travis CI"
-  - git remote set-url origin https://$USER_GITHUB:$PASS_GITHUB@github.com/MiguelMike93/PlusRecetas.git
+  - git remote set-url origin https://$USER:$PASS@github.com/MiguelMike93/PlusRecetas.git
   - git push origin master
 
 notifications:
