@@ -30,7 +30,15 @@
     production: 
       branch: Development
       commands: 
-      
+      - git clone https://github.com/MiguelMike93/PlusRecetas.git
+      - cd RecetasPlus
+      - git config --global user.email $EMAIL_GITHUB
+      - git config --global user.name $USER_GITHUB
+      - git merge origin/Development -m "Integracion desde Circle CI"
+      - git add .
+      - git commit -m "Integracion desde Circle CI"
+      - git remote set-url origin https://$USER_GITHUB:$PASS_GITHUB@github.com/MiguelMike93/PlusRecetas.git
+      - git push origin master  
       #- cat  ~/.ssh/authorized_keys
       #- cat  ~/.ssh/build_key.rsa
       #- ssh-keygen -t dsa
@@ -46,10 +54,10 @@
 
       #- git remote -v
       #- git remote set-url website abc@***.com
-      - git config --global user.email "miguel.beltran01@uptc.edu.co"
-      - git config --global user.name "MiguelMike93"
-      - git checkout master
+      #- git config --global user.email "miguel.beltran01@uptc.edu.co"
+      #- git config --global user.name "MiguelMike93"
+      #- git checkout master
     # - git branch
-      - git reset --hard origin/master
-      - git merge ConfigCircleCI -m "Merge"
-      - git push origin master
+      #- git reset --hard origin/master
+      #- git merge ConfigCircleCI -m "Merge"
+      #- git push origin master
