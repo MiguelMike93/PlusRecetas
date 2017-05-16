@@ -18,7 +18,7 @@ after_success:
   - git config --global user.email "miguel.beltran01@uptc.edu.co"
   - git config --global user.name "MiguelMike93"
   - git checkout master
-  - git merge origin/develop -m "Update to deploy"
+  - git merge origin/Desarrollo -m "Update to deploy"
   - git remote set-url origin https://$USER:$PASS@github.com/MiguelMike93/PlusRecetas.git
   - git push origin master
 
