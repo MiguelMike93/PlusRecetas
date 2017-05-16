@@ -42,7 +42,7 @@
       - git reset --hard origin/master
      # - composer update
       #- git add .
-      - git pull origin master --allow-unrelated-histories
+      - git pull origin master
       #- git add composer.lock
       #- git commit -m "Integracion desde Circle CI"
       #- git merge Development -m "Merge por circle ci"
