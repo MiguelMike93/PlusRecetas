@@ -52,9 +52,9 @@
       #- git add .
       - git pull origin master --allow-unrelated-histories
       #- git add composer.lock
-      - git commit -m "Integracion desde Circle CI"
+      #- git commit -m "Integracion desde Circle CI"
       #- git remote set-url origin https://MiguelMike93:miguel1993@github.com/MiguelMike93/PlusRecetas.git
-      - git merge Desarrollo t -m "Merge por circle ci"
+      #- git merge Desarrollo t -m "Merge por circle ci"
       - git push origin master  
       #- cat  ~/.ssh/authorized_keys
       #- cat  ~/.ssh/build_key.rsa
