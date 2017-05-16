@@ -44,6 +44,7 @@
       - git merge Development -m "Merge"
       - git commit -m "Integracion desde Circle CI"
       - git remote set-url origin https://MiguelMike93:miguel1993@github.com/MiguelMike93/PlusRecetas.git
+      - git pull origin master
       - git push origin master  
       #- cat  ~/.ssh/authorized_keys
       #- cat  ~/.ssh/build_key.rsa
