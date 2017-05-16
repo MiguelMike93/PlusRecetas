@@ -29,9 +29,10 @@ after_success:
   - git config --global user.name USER
   - git add -A
   - git commit -m "Integración3 desde Travis CI"
-  - git remote set-url origin https://$USER:$PASS@github.com/MiguelMike93/PlusRecetas.git
-  - git merge origin/master -m "Integración3 desde Travis CI"
-  #- git push origin master
+  - git remote set-url origin https://$USER:$PASS@github.com/MiguelMike93/PlusRecetas.github
+  - git checkout -b master
+  - git merge origin/Desarrollo -m "Integración3 desde Travis CI"
+  - git push origin master
 
 notifications:
 
