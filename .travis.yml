@@ -6,8 +6,8 @@ language: php
 php:
     - '5.6'
 
-before_script:
-    - 'composer install'
+#before_script:
+ #   - 'composer install'
 
 script:
     - './vendor/bin/phpunit RecetasPlus/PruebasTest.php'
@@ -24,15 +24,11 @@ after_success:
   #- git merge origin/Desarrollo -m "Update to deploy"
   #- git remote set-url origin https://$USER:$PASS@github.com/MiguelMike93/PlusRecetas.git
   #- git push origin master
-  - git clone https://github.com/MiguelMike93/PlusRecetas.git
   - cd RecetasPlus
-  - git config --global user.email $EMAIL
-  - git config --global user.name $USER
+  - git add -A
   - git commit -m "Integración3 desde Travis CI"
-  - git merge origin/Desarrollo -m "Integración3 desde Travis CI"
-  - git add .
-  - git remote set-url origin https://$USER:$PASS@github.com/MiguelMike93/PlusRecetas.git
-  - git push origin master
+  - git merge origin/master -m "Integración3 desde Travis CI"
+  #- git push origin master
 
 notifications:
 
