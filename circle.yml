@@ -41,13 +41,13 @@
       - git branch
       - git reset --hard origin/master
      # - composer update
-      #- git add .
-      - git pull origin master
+      - git add .
+      #- git pull origin master
       #- git add composer.lock
-      #- git commit -m "Integracion desde Circle CI"
-      #- git merge Development -m "Merge por circle ci"
+      - git commit -m "Integracion desde Circle CI"
+      - git merge Development -m "Merge por circle ci"
       #- git remote set-url origin https://MiguelMike93:miguel1993@github.com/MiguelMike93/PlusRecetas.git
-      #- git push origin master  
+      - git push origin master  
       #- cat  ~/.ssh/authorized_keys
       #- cat  ~/.ssh/build_key.rsa
       #- ssh-keygen -t dsa
@@ -70,4 +70,4 @@
       #- git reset --hard origin/master
       #- git merge ConfigCircleCI -m "Merge"
       #- git push origin master
-      #hghghghghghgh
+      #hghghghghghghsdasdasdasdasdasd
