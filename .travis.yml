@@ -13,12 +13,11 @@ script:
     - './vendor/bin/phpunit RecetasPlus/PruebasTest.php'
 
 after_success:
-  - git clone https://github.com/MiguelMike93/PlusRecetas.git
+  - git clone git:repositoryname --branch otherbranch
+  - git checkout -b master
   - cd RecetasPlus
   - git config --global user.email "miguel.beltran01@uptc.edu.co"
   - git config --global user.name "MiguelMike93"
-  - git checkout master
-  - git checkout -t -b master origin/master
   - git branch
   - git merge origin/Desarrollo -m "Update to deploy"
   - git remote set-url origin https://$USER:$PASS@github.com/MiguelMike93/PlusRecetas.git
