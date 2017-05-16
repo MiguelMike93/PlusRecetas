@@ -65,7 +65,7 @@
               <ul class="nav navbar-nav navbar-right scroll">
                  <li class="active"><a href="#home">Inicio</a></li>
 
-                 <li ><a href="#menu">Recetas fresquitas</a></li>
+                 <li ><a href="#menu">Recetas Nuevas</a></li>
 
                  <li ><a href="#menu">Recetas nuevas</a></li>
 
