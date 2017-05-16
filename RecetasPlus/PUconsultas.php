@@ -1,8 +1,9 @@
 <?php
-require_once 'DataDb.php';
-class PruebasTest extends PHPUnit_Framework_TestCase{
+use PHPUnit\Framework\TestCase;
+include_once 'DataDb.php';
+class PUConexion extends TestCase{
   
-    public function test_Host() {
+    public function testHost() {
     
         $d = new DataDb();
         

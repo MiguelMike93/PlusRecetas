@@ -4,11 +4,7 @@
 <meta charset="UTF-8" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-
-<title>Recetas Plus</title>
-
 <title>RecetasPlus</title>
-
 
 <!-- Google fonts -->
 <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,700' rel='stylesheet' type='text/css'>
@@ -64,11 +60,7 @@
             <div class="navbar-collapse  collapse">
               <ul class="nav navbar-nav navbar-right scroll">
                  <li class="active"><a href="#home">Inicio</a></li>
-
-                 <li ><a href="#menu">Recetas fresquitas</a></li>
-
                  <li ><a href="#menu">Recetas nuevas</a></li>
-
                  <li ><a href="#foods">Recetas</a></li>
                  <!--<li ><a href="#partners">Partners</a></li>-->
                  <li ><a href="#contact">Envía tu receta</a></li>
@@ -104,48 +96,131 @@
 <!-- #Slider Ends -->
 </div>
 
-<!-- Cirlce Starts -->
+
+<!-- Recetas nuevas -->
 <div id="menu"  class="container spacer about">
-<h2 class="text-center wowload fadeInUp">RecetasPlus</h2>  
+<h1 class="text-center wowload fadeInUp">Recetas Nuevas</h1>  
+<p>
+  
+
+
+</p>
   <div class="row">
   <div class="col-sm-6 wowload fadeInLeft">
     <h4><i class="fa fa-camera-retro"></i> Recetas Nuevas </h4>
     <?php
-		
-		include 'form.php';
-
-    $form =new form();
-    $registro = $form->returnRecipe();
-		if ($registro==false) {
-      trigger_error('wrong SQL:'. $query. 'Error: '. conn->error, E_USER_ERROR);
-    }
-    else {
-      $rows_return= $registro->num_rows;
-    }
-
-    $registro->data_seek(0);
-    while ($row=$registro->fetch_assoc()) {
-		    <a href="recipe1.php?variable=<?php echo $row['ID_RECETA']; ?>">
-		      <p>
-		        <h4><?php echo $row['NOMBRE_RECETA']; ?></h4>
-		      </p>
-		    </a>
- 	   }
+    $host = "sql313.epizy.com";
+    $username = "epiz_19830617";
+    $db = "epiz_19830617_recetasPlusdb";
+    $pass = "miguel1993";
+    // Create connection
+    $cont=0;
+    $conn= mysql_connect($host, $username, $pass) or die("Error al buscar la infor");
+    mysql_select_db($db, $conn) or die("No canciona");
+    $registro=mysql_query("SELECT ID_RECETA,NOMBRE_RECETA FROM RECETAS LIMIT 20 OFFSET 4") or die("No canciona" .mysql_error());
+    while($reg=mysql_fetch_array($registro)){ ?>
+        <a href="recipe1.php?variable=<?php echo $reg['ID_RECETA']; ?>">
+          <p>
+            <h4><?php echo $reg['NOMBRE_RECETA']; ?></h4>
+          </p>
+          </a>
+    <?php }
+    mysql_close($conn);
     ?>  
-
   </div>
- 
-      <!-- menus -->
-
-
-
+  <!--
+  <div class="col-sm-12 wowload fadeInLeft">
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+  <div class="carousel-inner">  
+    <?php
+    $host = "sql313.epizy.com";
+    $username = "epiz_19830617";
+    $db = "epiz_19830617_recetasPlusdb";
+    $pass = "miguel1993";
+    $check = true;
+    // Create connection
+    $conn= mysql_connect($host, $username, $pass) or die("Error al buscar la infor");
+    mysql_select_db($db, $conn) or die("No canciona");
+    $registro=mysql_query("SELECT ID_RECETA, NOMBRE_RECETA, IMAGEN_RECETA FROM RECETAS LIMIT 20 OFFSET 4") or die("No canciona" .mysql_error());
+    while($reg=mysql_fetch_array($registro)){ ?>
+      <div class="col-sm-6 wowload fadeInLeft">
+      <div class="item row">
+        <a href="recipe1.php?variable=<?php echo $reg['ID_RECETA']; ?>">
+          <div class="animated slideInLeft col-sm-12"><img src=<?php echo $reg['IMAGEN_RECETA']?> class="img-responsive"></div>
+          <div class="carousel-caption">
+            <h3><?php echo $reg['NOMBRE_RECETA']; ?></h3>
+          </div>
+        </a>
+      </div>
+      </div>  
+    <?php }    
+    ?>  
+        <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+        <li data-target="#myCarousel" data-slide-to="3"></li>
+        <li data-target="#myCarousel" data-slide-to="4"></li>
+        <li data-target="#myCarousel" data-slide-to="5"></li>
+        </ol>
+        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+          <span class="glyphicon glyphicon-chevron-left"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" data-slide="next">
+          <span class="glyphicon glyphicon-chevron-right"></span>
+          <span class="sr-only">Next</span>
+        </a>
+    </div>  
   </div>
   </div>
+  -->
+<!-- Categorías -->
+  <div class="col-sm-6 wowload fadeInRight">
+     <p class="nombreReceta">¿Buscando ideas? Síguenos, encontrarás las mejores recetas, fáciles de preparar y con los mejores consejos.</p>
+      <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+  <div class="panel panel-primary">
+    <div class="panel-heading" role="tab">
+      <h4 class="panel-title">
+        <a href="categories.php?variable=Plato principal">
+         Platos Principales
+        </a>
+      </h4>
+    </div>
+  </div>
+  <div class="panel panel-info">
+    <div class="panel-heading" role="tab">
+      <h4 class="panel-title">
+        <a href="categories.php?variable=Entrada">
+        Entradas
+        </a>
+      </h4>
+    </div>
+  </div>
+  <div class="panel panel-primary">
+    <div class="panel-heading" role="tab">
+      <h4 class="panel-title">
+        <a href="categories.php?variable=Bebida">
+        Bebidas
+        </a>
+      </h4>
+    </div>
+  </div>
 
-  
+  <div class="panel panel-info">
+    <div class="panel-heading" role="tab">
+      <h4 class="panel-title">
+        <a href="categories.php?variable=Postre">
+        Postres
+        </a>
+      </h4>
+    </div>
+  </div>
+
 </div>
-<!-- #Cirlce Ends -->
-
+</div>
+</div>
+</div>
 
 <!-- works -->
 <div id="foods"  class=" clearfix grid"> 
@@ -154,9 +229,6 @@
         <figcaption>
             <h2>Mojito de Naranja</h2>
             <p>¿Te interesa? Síguenos...<br>
-              <?php
-              $var="holiii";
-              ?>
             <a href="recipe1.php?variable=1">Ver más </a></p>            
         </figcaption>
     </figure>
@@ -211,9 +283,9 @@
   <div class="row wowload fadeInLeftBig">
   <div class="col-sm-6 col-sm-offset-0 col-sm-12">     
   <form method="POST" action="form.php">
-        <input type="text" pattern="^[a-zA-Z\s]*$" name="usuario" placeholder="Nombre" required>
-        <input type="text" pattern="^[a-zA-Z\s]*$" name="receta" placeholder="Nombre de la receta" required>
-        <input type="text" name="imagen" placeholder="URL de imagen de la receta" required>
+        <input class="form-control" type="text" pattern="^[a-zA-Z\s]*$" name="usuario" placeholder="Nombre" required>
+        <input class="form-control" type="text" pattern="^[a-zA-Z\s]*$" name="receta" placeholder="Nombre de la receta" required>
+        <input class="form-control" type="text" name="imagen" placeholder="URL de imagen de la receta" required>
         <select class="form-control" name="categorias">
           <option>Plato principal</option>
           <option>Entrada</option>
@@ -236,7 +308,7 @@
 Copyright 2017 DevStudio. All rights reserved.
 </div>
 <!-- # Footer Ends -->
-<a href="#home" class="gototop "><i class="fa fa-angle-up  fa-3x"></i></a>
+<a href="#home" class="gototop "><img src="images/faviconRP.ico"><i class="fa fa-angle-up  fa-3x"></i></a>
 
 
 
