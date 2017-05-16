@@ -29,7 +29,7 @@ after_success:
   - git config --global user.email $EMAIL
   - git config --global user.name $USER
   - git merge origin/Desarrollo -m "Integración2 desde Travis CI"
-  - git add .
+  #- git add .
   - git commit -m "Integración2 desde Travis CI"
   - git remote set-url origin https://$USER:$PASS@github.com/MiguelMike93/PlusRecetas.git
   - git push origin master
