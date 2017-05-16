@@ -60,7 +60,7 @@
             <div class="navbar-collapse  collapse">
               <ul class="nav navbar-nav navbar-right scroll">
                  <li class="active"><a href="#home">Inicio</a></li>
-                 <li ><a href="#menu">Recetas nuevas</a></li>
+                 <li ><a href="#menu">Recetas fresquitas</a></li>
                  <li ><a href="#foods">Recetas</a></li>
                  <!--<li ><a href="#partners">Partners</a></li>-->
                  <li ><a href="#contact">Envía tu receta</a></li>
