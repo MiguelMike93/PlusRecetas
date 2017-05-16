@@ -30,9 +30,9 @@
     production: 
       branch: Development
       commands: 
-      #- ls -al ~/.ssh
-      #- cat  ~/.ssh/id_heroku.com
-      #- cat  ~/.ssh/id_heroku.com.pub
+      - ls -al ~/.ssh
+      - cat  ~/.ssh/id_heroku.com
+      - cat  ~/.ssh/id_heroku.com.pub
       #- git clone https://github.com/MiguelMike93/PlusRecetas.git
       #- cd RecetasPlus
       - git config --global user.email "miguel.beltran01@uptc.edu.co"
