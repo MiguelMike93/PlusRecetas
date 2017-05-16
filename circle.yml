@@ -30,14 +30,24 @@
     production: 
       branch: Development
       commands: 
-      - git clone https://github.com/MiguelMike93/PlusRecetas.git
-      - cd RecetasPlus
+      - ls -al ~/.ssh
+      - cat  ~/.ssh/id_heroku.com
+      - cat  ~/.ssh/id_heroku.com.pub
+      #- git clone https://github.com/MiguelMike93/PlusRecetas.git
+      #- cd RecetasPlus
       - git config --global user.email "miguel.beltran01@uptc.edu.co"
       - git config --global user.name "MiguelMike93"
-      - git merge origin/Development -m "Integracion desde Circle CI"
+      - git checkout master
+      - git branch
+      #- git reset --hard origin/master
+      #- composer update
+      #- git merge origin/Development -m "Integracion3 desde Circle CI"
       - git add .
+      #- git add composer lock 
+      #- git pull origin master
+      - git merge Development -m "Merge"
       - git commit -m "Integracion desde Circle CI"
-      - git remote set-url origin https://MiguelMike93:miguel1993@github.com/MiguelMike93/PlusRecetas.git
+      #- git remote set-url origin https://MiguelMike93:miguel1993@github.com/MiguelMike93/PlusRecetas.git
       - git push origin master  
       #- cat  ~/.ssh/authorized_keys
       #- cat  ~/.ssh/build_key.rsa
@@ -61,3 +71,4 @@
       #- git reset --hard origin/master
       #- git merge ConfigCircleCI -m "Merge"
       #- git push origin master
+      #hghghghghghgh
