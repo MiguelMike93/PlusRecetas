@@ -1,6 +1,6 @@
 <?php
 require_once 'DataDb.php';
-class PruebasTest extends PHPUnit_Framework_TestCasee{
+class Pruebastest extends PHPUnit_Framework_TestCasee{
   
     public function test_Host() {
     
