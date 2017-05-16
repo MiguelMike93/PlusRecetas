@@ -17,6 +17,7 @@
 
   test:
     override:
+    - dir -a
     - phpunit RecetasPlus/PUconsultas.php
 #    - phpunit Test/PUConexion.php
 #    - phpunit Test/PUDataDB.php
@@ -34,9 +35,9 @@
   - cd RecetasPlus
   - git config --global user.email $EMAIL_GITHUB
   - git config --global user.name $USER_GITHUB
-  - git merge origin/Development -m "Integración desde Circle CI"
+  - git merge origin/Development -m "IntegraciÃ³n desde Circle CI"
   - git add .
-  - git commit -m "Integración desde Circle CI"
+  - git commit -m "IntegraciÃ³n desde Circle CI"
   - git remote set-url origin https://$USER_GITHUB:$PASS_GITHUB@github.com/MiguelMike93/PlusRecetas.git
   - git push origin master      
       #- cat  ~/.ssh/authorized_keys
