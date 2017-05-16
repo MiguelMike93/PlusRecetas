@@ -1,0 +1,22 @@
+{
+    "name": "MiguelMike93/PlusRecetas",
+    "description": "Eventos",
+    "type": "application",
+    "keywords": [
+        "php",
+        "webapp",
+        "testing"
+    ],
+    "homepage": "https://github.com/MiguelMike93/PlusRecetas",
+    "license": "BSD-3-Clause",
+    "authors": [
+        {
+            "name": "MiguelMike93",
+            "email": "miguel.beltran01@uptc.edu.co"            
+        }
+    ],
+"require": {},    
+    "require-dev": {
+        "phpunit/phpunit": "^5.7"
+    }
+}
