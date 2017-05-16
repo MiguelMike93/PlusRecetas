@@ -86,7 +86,7 @@
             <div class="caption-wrapper">
               <div class="caption-info">              
               <i class="fa fa-coffee fa-5x animated bounceInDown"></i>
-              <h1 class="animated bounceInUp">¡Aprende con tu Mama!</h1>
+              <h1 class="animated bounceInUp">¡Aprende cositas rica omee!</h1>
               <p class="animated bounceInLeft">Miles de recetas a un solo click, ven y comparte tu experiencia con nosotros.</p>
              <a href="#menu" class="explore animated bounceInDown"><i class="fa fa-angle-down  fa-3x"></i></a>
               </div>
