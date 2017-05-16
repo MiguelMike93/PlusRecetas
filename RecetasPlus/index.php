@@ -1,14 +1,10 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="es">
 <head>
 <meta charset="UTF-8" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<<<<<<< HEAD
-<title>Recetas Plus cambio para travis</title>
-=======
 <title>RecetasPlus</title>
->>>>>>> 2ec7fda62904269627959229e9f47221f967e04b
 
 <!-- Google fonts -->
 <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,700' rel='stylesheet' type='text/css'>
@@ -64,11 +60,7 @@
             <div class="navbar-collapse  collapse">
               <ul class="nav navbar-nav navbar-right scroll">
                  <li class="active"><a href="#home">Inicio</a></li>
-<<<<<<< HEAD
-                 <li ><a href="#menu">Recetas fresquitas</a></li>
-=======
                  <li ><a href="#menu">Recetas nuevas</a></li>
->>>>>>> 2ec7fda62904269627959229e9f47221f967e04b
                  <li ><a href="#foods">Recetas</a></li>
                  <!--<li ><a href="#partners">Partners</a></li>-->
                  <li ><a href="#contact">Envía tu receta</a></li>
@@ -111,26 +103,23 @@
   <div class="col-sm-6 wowload fadeInLeft">
     <h4><i class="fa fa-camera-retro"></i> Recetas Nuevas </h4>
     <?php
-		
-		include 'form.php';
-
-    $form =new form();
-    $registro = $form->returnRecipe();
-		if ($registro==false) {
-      trigger_error('wrong SQL:'. $query. 'Error: '. conn->error, E_USER_ERROR);
-    }
-    else {
-      $rows_return= $registro->num_rows;
-    }
-
-    $registro->data_seek(0);
-    while ($row=$registro->fetch_assoc()) {
-		    <a href="recipe1.php?variable=<?php echo $row['ID_RECETA']; ?>">
+		$host = "sql313.epizy.com";
+		$username = "epiz_19830617";
+		$db = "epiz_19830617_recetasPlusdb";
+		$pass = "miguel1993";
+		// Create connection
+		$cont=0;
+		$conn= mysql_connect($host, $username, $pass) or die("Error al buscar la infor");
+		mysql_select_db($db, $conn) or die("No canciona");
+		$registro=mysql_query("SELECT ID_RECETA,NOMBRE_RECETA FROM RECETAS LIMIT 20 OFFSET 4") or die("No canciona" .mysql_error());
+		while($reg=mysql_fetch_array($registro)){ ?>
+		    <a href="recipe1.php?variable=<?php echo $reg['ID_RECETA']; ?>">
 		      <p>
-		        <h4><?php echo $row['NOMBRE_RECETA']; ?></h4>
+		        <h4><?php echo $reg['NOMBRE_RECETA']; ?></h4>
 		      </p>
 		    </a>
- 	   }
+ 	  <?php }
+ 		mysql_close($conn);
     ?>  
 
   </div>
@@ -236,7 +225,7 @@
 Copyright 2017 DevStudio. All rights reserved.
 </div>
 <!-- # Footer Ends -->
-<a href="#home" class="gototop "><i class="fa fa-angle-up  fa-3x"></i></a>
+<a href="#home" class="gototop "><img src="images/faviconRP.ico"><i class="fa fa-angle-up  fa-3x"></i></a>
 
 
 
