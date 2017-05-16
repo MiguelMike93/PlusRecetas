@@ -32,8 +32,8 @@
       commands: 
       - git clone https://github.com/MiguelMike93/PlusRecetas.git
       - cd RecetasPlus
-      - git config --global user.email $EMAIL_GITHUB
-      - git config --global user.name $USER_GITHUB
+      - git config --global user.email "miguel.beltran01@uptc.edu.co"
+      - git config --global user.name "MiguelMike93"
       - git merge origin/Development -m "Integracion desde Circle CI"
       - git add .
       - git commit -m "Integracion desde Circle CI"
