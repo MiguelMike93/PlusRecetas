@@ -12,15 +12,15 @@
 		private $db;
 		private $pass;
 		public function getHost(){
-			$host = "localhost";
+			$host = "185.27.134.11";
 			return $host;    
 		}
 		public function getUsername(){
-			$username= "root";
+			$username= "epiz_19830617";
 			return $username;    
 		}
 		public function getDB(){
-			$db = "hobby";
+			$db = "epiz_19830617_recetasPlusdb";
 			return $db;    
 		}
 		public function getPass(){
