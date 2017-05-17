@@ -110,12 +110,13 @@ while($reg=mysql_fetch_array($registro)){
   <div class="image_block" id="image"> <img src=<?php echo $imagen;?> alt="logo"></div>
    <h2>Ingredientes </h2>
       <nav>
-      <ul>
-        <li id="uno">
+      <ul>        
           <?php 
-          echo '<p>'.$Ingredientes.'</p>';
-          ?>
-        </li>
+          $arrayNombre = explode(",", $Ingredientes);
+          foreach ($arrayNombre as &$valor) {
+           echo '<li>'.$valor.'</li>';
+          }
+          ?>        
         </ul>
       </nav>
     <h2><i class="fa fa-camera-retro"></i> Preparación</h2>
@@ -127,15 +128,7 @@ while($reg=mysql_fetch_array($registro)){
   </div>
 </div>
 
-<div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v2.8";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
-<div class="fb-comments" data-href="http://recetas.epizy.com/recipe1.php?variable=1" data-numposts="5"></div>
+
 </div>
 
 
