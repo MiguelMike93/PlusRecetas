@@ -12,7 +12,7 @@
 		private $db;
 		private $pass;
 		public function getHost(){
-			$host = "185.27.134.11";
+			$host = "localhost";
 			return $host;    
 		}
 		public function getUsername(){
