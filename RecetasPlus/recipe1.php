@@ -141,6 +141,29 @@ while($reg=mysql_fetch_array($registro)){
   </div>
   <input id="submit_button" type="submit" name="enviar" value="Enviar" />
 </form>
+ <?php
+$var=$_GET['variable'];
+  $host = "localhost";
+    $username = "root";
+    $db = "epiz_19830617_recetasPlusdb";
+    $pass = "";
+// Create connection
+$conn= mysql_connect($host, $username, $pass) or die("Error al buscar la infor");
+mysql_select_db($db, $conn) or die("No canciona");
+$registro=mysql_query("SELECT NOMBRE_USUARIO, DESCRIPCION FROM COMENTARIOS where id_receta=".$var) or die("No funnciona" .mysql_error());
+while($reg=mysql_fetch_array($registro)){
+  $name=$reg['NOMBRE_USUARIO'];
+  $descripcion=$reg['DESCRIPCION'];
+  ?>
+  <div class="receta">
+   <!-- <h2 class="usuario_nombre"><?php echo $name; ?> Comentó</h2>-->
+    <label for="usuario_nombre"><?php echo $name; ?> comentó:</label><br />
+    <label for="comentario_desc">  <?php echo $descripcion; ?></label><br />
+     <hr>
+  <!--  <h4 class="receta_descripcion"><?php echo $descripcion; ?></h4>-->
+  </div>
+<?php } ?>
+<br />
 </div>
 </div>
 </div>
