@@ -143,10 +143,10 @@ while($reg=mysql_fetch_array($registro)){
 </form>
  <?php
 $var=$_GET['variable'];
-  $host = "localhost";
-    $username = "root";
-    $db = "epiz_19830617_recetasPlusdb";
-    $pass = "";
+$host = "sql313.epizy.com";
+$username = "epiz_19830617";
+$db = "epiz_19830617_recetasPlusdb";
+$pass = "miguel1993";
 // Create connection
 $conn= mysql_connect($host, $username, $pass) or die("Error al buscar la infor");
 mysql_select_db($db, $conn) or die("No canciona");
@@ -167,8 +167,6 @@ while($reg=mysql_fetch_array($registro)){
 </div>
 </div>
 </div>
-
-
   <!-- Footer Starts -->
   <div class="footer text-center spacer">
   
