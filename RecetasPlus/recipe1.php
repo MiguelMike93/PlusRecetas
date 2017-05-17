@@ -126,9 +126,22 @@ while($reg=mysql_fetch_array($registro)){
           ?>
         </p>
   </div>
+  <div id="comentarios">
+<form id="contact_form" action="coments.php" method="POST">
+  <div class="row">
+    <label for="name"><h3>Deja aquí tu comentario</h3></label><br />
+    <label for="name">Tu nombre:</label><br />
+    <input id="name" class="input" name="Comentario[usuario]" type="text" value="" size="30" /><br />
+<!--<input id="id" type="hidden" name="idreceta" value=1>-->
+    <input id="receta" class="input" type="hidden" name="Comentario[receta]" value="<?php echo (isset($_GET['variable']))?$_GET['variable']:'' ?>" />
+    <label for="message">Tu mensaje:</label><br />
+    <textarea id="com" class="input" name="Comentario[descripcion]" cols="28" rows="10"></textarea>
+   
+  </div>
+  <input id="submit_button" type="submit" name="enviar" value="Enviar" />
+</form>
 </div>
-
-
+</div>
 </div>
 
 
