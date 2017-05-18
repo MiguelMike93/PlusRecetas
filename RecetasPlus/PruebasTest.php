@@ -4,7 +4,7 @@ class PruebasTest extends PHPUnit_Framework_TestCase{
   
     public function test_Host() {
         $d = new DataDb();
-        $expect = 'localhost';
+        $expect = '185.27.134.11';
         $actual = $d->getHost();
         $this->assertEquals($expect, $actual);
     }
