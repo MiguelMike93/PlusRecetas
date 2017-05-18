@@ -84,10 +84,10 @@
           <img src="images/back.jpg" alt="banner" class="img-responsive">
           <div class="caption">
             <div class="caption-wrapper">
-              <div class="caption-info">              
+              <div class="caption-info">
               <i class="fa fa-coffee fa-5x animated bounceInDown"></i>
               <h1 class="animated bounceInUp">¡Aprende Con Nosotros!</h1>
-              <p class="animated bounceInLeft">Miles de recetas a un solo click, ven y comparte tu experiencia con nosotros.</p>
+              <p class="animated bounceInLeft">Miles de comentarios a un solo click, ven y comparte tu experiencia con nosotros.</p>
              <a href="#menu" class="explore animated bounceInDown"><i class="fa fa-angle-down  fa-3x"></i></a>
               </div>
             </div>
@@ -99,9 +99,9 @@
 
 <!-- Recetas nuevas -->
 <div id="menu"  class="container spacer about">
-<h1 class="text-center wowload fadeInUp">Recetas Nuevas</h1>  
+<h1 class="text-center wowload fadeInUp">Recetas Nuevas</h1>
 <p>
-  
+
 
 
 </p>
@@ -126,12 +126,12 @@
           </a>
     <?php }
     mysql_close($conn);
-    ?>  
+    ?>
   </div>
   <!--
   <div class="col-sm-12 wowload fadeInLeft">
   <div id="myCarousel" class="carousel slide" data-ride="carousel">
-  <div class="carousel-inner">  
+  <div class="carousel-inner">
     <?php
     $host = "sql313.epizy.com";
     $username = "epiz_19830617";
@@ -152,9 +152,9 @@
           </div>
         </a>
       </div>
-      </div>  
-    <?php }    
-    ?>  
+      </div>
+    <?php }
+    ?>
         <ol class="carousel-indicators">
         <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
         <li data-target="#myCarousel" data-slide-to="1"></li>
@@ -171,7 +171,7 @@
           <span class="glyphicon glyphicon-chevron-right"></span>
           <span class="sr-only">Next</span>
         </a>
-    </div>  
+    </div>
   </div>
   </div>
   -->
@@ -223,13 +223,13 @@
 </div>
 
 <!-- works -->
-<div id="foods"  class=" clearfix grid"> 
+<div id="foods"  class=" clearfix grid">
     <figure class="effect-oscar  wowload fadeInUp">
         <img src="images/portfolio/1.jpg" alt="img01"/>
         <figcaption>
             <h2>Mojito de Naranja</h2>
             <p>¿Te interesa? Síguenos...<br>
-            <a href="recipe1.php?variable=1">Ver más </a></p>            
+            <a href="recipe1.php?variable=1">Ver más </a></p>
         </figcaption>
     </figure>
      <figure class="effect-oscar  wowload fadeInUp">
@@ -237,7 +237,7 @@
         <figcaption>
             <h2>Alitas de Pollo</h2>
             <p>¿Te interesa? Síguenos...<br>
-            <a href="recipe1.php?variable=2">Ver más</a></p> 
+            <a href="recipe1.php?variable=2">Ver más</a></p>
         </figcaption>
     </figure>
      <figure class="effect-oscar  wowload fadeInUp">
@@ -245,7 +245,7 @@
         <figcaption>
             <h2>Filetes Rusos</h2>
             <p>¿Te interesa? Síguenos...<br>
-            <a href="recipe1.php?variable=3">Ver más</a></p> 
+            <a href="recipe1.php?variable=3">Ver más</a></p>
         </figcaption>
     </figure>
      <figure class="effect-oscar  wowload fadeInUp">
@@ -253,16 +253,16 @@
         <figcaption>
             <h2>Cheesecake de pasión</h2>
             <p>¿Te interesa? Síguenos...<br>
-            <a href="recipe1.php?variable=4">Ver más</a></p> 
+            <a href="recipe1.php?variable=4">Ver más</a></p>
         </figcaption>
     </figure>
-     
+
      <figure class="effect-oscar  wowload fadeInUp">
         <img src="images/portfolio/5.jpg" alt="img01"/>
         <figcaption>
             <h2>Lomo al Horno</h2>
             <p>¿Te interesa? Síguenos...<br>
-            <a href="recipe1.php?variable=5">Ver más</a></p> 
+            <a href="recipe1.php?variable=5">Ver más</a></p>
         </figcaption>
     </figure>
     <figure class="effect-oscar  wowload fadeInUp">
@@ -270,9 +270,9 @@
         <figcaption>
             <h2>Rollitos de pollo</h2>
             <p>¿Te interesa? Síguenos...<br>
-            <a href="recipe1.php?variable=6">Ver más</a></p> 
+            <a href="recipe1.php?variable=6">Ver más</a></p>
         </figcaption>
-    </figure>   
+    </figure>
 </div>
 
 <!--Contact Starts-->
@@ -281,7 +281,7 @@
 <div class="container contactform center">
 <h2 class="text-left wowload fadeInUp">¿Tienes una receta? Cuéntanos...</h2>
   <div class="row wowload fadeInLeftBig">
-  <div class="col-sm-6 col-sm-offset-0 col-sm-12">     
+  <div class="col-sm-6 col-sm-offset-0 col-sm-12">
   <form method="POST" action="form.php">
         <input class="form-control" type="text" pattern="^[a-zA-Z\s]*$" name="usuario" placeholder="Nombre" required>
         <input class="form-control" type="text" pattern="^[a-zA-Z\s]*$" name="receta" placeholder="Nombre de la receta" required>
@@ -323,7 +323,7 @@ Copyright 2017 DevStudio. All rights reserved.
     <a class="prev">‹</a>
     <a class="next">›</a>
     <a class="close">×</a>
-    <!-- The modal dialog, which will be used to wrap the lightbox content -->    
+    <!-- The modal dialog, which will be used to wrap the lightbox content -->
 </div>
 
 
