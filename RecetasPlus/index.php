@@ -4,7 +4,7 @@
 <meta charset="UTF-8" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<title>Recetas Plus</title>
+<title>Cambia por favor</title>
 
 <!-- Google fonts -->
 <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,700' rel='stylesheet' type='text/css'>
@@ -86,7 +86,7 @@
             <div class="caption-wrapper">
               <div class="caption-info">              
               <i class="fa fa-coffee fa-5x animated bounceInDown"></i>
-              <h1 class="animated bounceInUp">¡Aprende con nosotros!</h1>
+              <h1 class="animated bounceInUp">¡Aprende cositas rica omee!</h1>
               <p class="animated bounceInLeft">Miles de recetas a un solo click, ven y comparte tu experiencia con nosotros.</p>
              <a href="#menu" class="explore animated bounceInDown"><i class="fa fa-angle-down  fa-3x"></i></a>
               </div>

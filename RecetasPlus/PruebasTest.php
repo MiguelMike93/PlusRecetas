@@ -20,7 +20,5 @@ class PruebasTest extends PHPUnit_Framework_TestCase{
         $actual = $d->getDB();
         $this->assertEquals($expect, $actual);
     } 
-  
-  
 }
 ?>
