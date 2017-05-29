@@ -27,6 +27,15 @@
   <link rel="icon" href="images/faviconRP.ico" type="image/x-icon">
   <link rel="stylesheet" href="assets/style.css">
   <script src="js/jquery-3.1.1.min.js" type="text/javascript"></script> 
+  <script type='text/javascript'>
+window.__lo_site_id = 83921;
+
+  (function() {
+    var wa = document.createElement('script'); wa.type = 'text/javascript'; wa.async = true;
+    wa.src = 'https://d10lpsik1i8c69.cloudfront.net/w.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(wa, s);
+    })();
+  </script>
 </head>
 
 <body class="recipe-body">
