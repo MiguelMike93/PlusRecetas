@@ -1,10 +1,10 @@
 <?php
 require_once 'DataDb.php';
 class PruebasTest extends PHPUnit_Framework_TestCase{
-  
+
     public function test_Host() {
         $d = new DataDb();
-        $expect = '185.27.134.11';
+        $expect = '185.27.134.10';
         $actual = $d->getHost();
         $this->assertEquals($expect, $actual);
     }
@@ -19,6 +19,6 @@ class PruebasTest extends PHPUnit_Framework_TestCase{
         $expect = 'epiz_19830617_recetasPlusdb';
         $actual = $d->getDB();
         $this->assertEquals($expect, $actual);
-    } 
+    }
 }
 ?>

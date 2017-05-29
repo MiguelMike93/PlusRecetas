@@ -28,6 +28,15 @@
 
 
 <link rel="stylesheet" href="assets/style.css">
+<script type='text/javascript'>
+window.__lo_site_id = 83921;
+
+  (function() {
+    var wa = document.createElement('script'); wa.type = 'text/javascript'; wa.async = true;
+    wa.src = 'https://d10lpsik1i8c69.cloudfront.net/w.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(wa, s);
+    })();
+  </script>
 
 </head>
 
@@ -87,7 +96,7 @@
               <div class="caption-info">
               <i class="fa fa-coffee fa-5x animated bounceInDown"></i>
               <h1 class="animated bounceInUp">¡Aprende Con Nosotros!</h1>
-              <p class="animated bounceInLeft">Miles de comentarios a un solo click, ven y comparte tu experiencia con nosotros.</p>
+              <p class="animated bounceInLeft">Miles de pruebas a un solo click, ven y comparte tu experiencia con nosotros.</p>
              <a href="#menu" class="explore animated bounceInDown"><i class="fa fa-angle-down  fa-3x"></i></a>
               </div>
             </div>
