@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+   <link rel="stylesheet" href="./estilos.css" type="text/css" media="all" />
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
   <!-- Google fonts -->
   <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,700' rel='stylesheet' type='text/css'>
@@ -30,6 +31,7 @@ window.__lo_site_id = 83921;
     })();
   </script>
 </head>
+<body class="categoria-body">
   <div class="topbar animated fadeInLeftBig"></div>
 
 <!-- Header Starts -->
@@ -95,15 +97,14 @@ window.__lo_site_id = 83921;
         </a>
       </div>
      </div>
-    <?php }
-    ?>
     </div>
-      <!-- Footer Starts -->
-  <div class="footer text-center spacer">
-  Copyright 2017 DevStudio. All rights reserved.
-  </div>
-  <!-- # Footer Ends -->
+
     </div>
+</div>
+  
+
+    
+<!-- # Footer Ends -->
     <!--
 
     
@@ -182,6 +183,14 @@ window.__lo_site_id = 83921;
     </div>
   </div>
 -->
+<!-- Footer Starts -->
+<div class="footer text-center spacer">
+
+    Copyright 2017 DevStudio. All rights reserved.
+</div>
+
+
 
 </body>
+
 </html>
