@@ -155,6 +155,7 @@ window.__lo_site_id = 83921;
     while($reg=mysql_fetch_array($registro)){ ?>
       <div class="col-sm-6 wowload fadeInLeft">
       <?php if ($check==0): ?>
+        <?php echo "HOLAAAAAAAAAAAAAAA" ?>
         <div class="item active">
         <a href="recipe1.php?variable=<?php echo $reg['ID_RECETA']; ?>">
           <div class="animated slideInLeft col-sm-12"><img src=<?php echo $reg['IMAGEN_RECETA']?> class="img-responsive"></div>
@@ -164,7 +165,6 @@ window.__lo_site_id = 83921;
         </a>
       </div>
       $check++;
-      <?php endif ?>
       <?php else: ?>
         <div class="item">
         <a href="recipe1.php?variable=<?php echo $reg['ID_RECETA']; ?>">
@@ -175,6 +175,7 @@ window.__lo_site_id = 83921;
         </a>
       </div>
       </div>
+       <?php endif ?>
     <?php }
     ?>
         <ol class="carousel-indicators">
