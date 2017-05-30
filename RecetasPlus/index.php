@@ -165,16 +165,6 @@ window.__lo_site_id = 83921;
         </a>
       </div>
       $check++;
-      <?php else: ?>
-        <div class="item">
-        <a href="recipe1.php?variable=<?php echo $reg['ID_RECETA']; ?>">
-          <div class="animated slideInLeft col-sm-12"><img src=<?php echo $reg['IMAGEN_RECETA']?> class="img-responsive"></div>
-          <div class="carousel-caption">
-            <h3><?php echo $reg['NOMBRE_RECETA']; ?></h3>
-          </div>
-        </a>
-      </div>
-      </div>
        <?php endif ?>
     <?php }
     ?>
