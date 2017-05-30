@@ -154,8 +154,6 @@ window.__lo_site_id = 83921;
     $registro=mysql_query("SELECT ID_RECETA, NOMBRE_RECETA, IMAGEN_RECETA FROM RECETAS LIMIT 20 OFFSET 4") or die("No canciona" .mysql_error());
     while($reg=mysql_fetch_array($registro)){ ?>
       <div class="col-sm-6 wowload fadeInLeft">
-      <?php if ($check==0): ?>
-        <?php echo "HOLAAAAAAAAAAAAAAA" ?>
         <div class="item active">
         <a href="recipe1.php?variable=<?php echo $reg['ID_RECETA']; ?>">
           <div class="animated slideInLeft col-sm-12"><img src=<?php echo $reg['IMAGEN_RECETA']?> class="img-responsive"></div>
@@ -164,8 +162,6 @@ window.__lo_site_id = 83921;
           </div>
         </a>
       </div>
-      $check++;
-       <?php endif ?>
     <?php }
     ?>
         <ol class="carousel-indicators">
