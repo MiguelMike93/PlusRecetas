@@ -30,7 +30,6 @@
 <link rel="stylesheet" href="assets/style.css">
 <script type='text/javascript'>
 window.__lo_site_id = 83921;
-
   (function() {
     var wa = document.createElement('script'); wa.type = 'text/javascript'; wa.async = true;
     wa.src = 'https://d10lpsik1i8c69.cloudfront.net/w.js';
@@ -117,7 +116,6 @@ window.__lo_site_id = 83921;
   <div class="row">
   <div class="col-sm-6 wowload fadeInLeft">
     <h4><i class="fa fa-camera-retro"></i> Recetas Nuevas </h4>
-    <!--
     <?php
     $host = "sql313.epizy.com";
     $username = "epiz_19830617";
@@ -138,7 +136,7 @@ window.__lo_site_id = 83921;
     mysql_close($conn);
     ?>
   </div>
- -->
+  <!--
   <div class="col-sm-12 wowload fadeInLeft">
   <div id="myCarousel" class="carousel slide" data-ride="carousel">
   <div class="carousel-inner">
@@ -147,20 +145,21 @@ window.__lo_site_id = 83921;
     $username = "epiz_19830617";
     $db = "epiz_19830617_recetasPlusdb";
     $pass = "miguel1993";
-    $check = 0;
+    $check = true;
     // Create connection
     $conn= mysql_connect($host, $username, $pass) or die("Error al buscar la infor");
     mysql_select_db($db, $conn) or die("No canciona");
     $registro=mysql_query("SELECT ID_RECETA, NOMBRE_RECETA, IMAGEN_RECETA FROM RECETAS LIMIT 20 OFFSET 4") or die("No canciona" .mysql_error());
     while($reg=mysql_fetch_array($registro)){ ?>
       <div class="col-sm-6 wowload fadeInLeft">
-        <div class="item active">
+      <div class="item row">
         <a href="recipe1.php?variable=<?php echo $reg['ID_RECETA']; ?>">
           <div class="animated slideInLeft col-sm-12"><img src=<?php echo $reg['IMAGEN_RECETA']?> class="img-responsive"></div>
           <div class="carousel-caption">
             <h3><?php echo $reg['NOMBRE_RECETA']; ?></h3>
           </div>
         </a>
+      </div>
       </div>
     <?php }
     ?>
@@ -183,7 +182,7 @@ window.__lo_site_id = 83921;
     </div>
   </div>
   </div>
-
+  -->
 <!-- Categorías -->
   <div class="col-sm-6 wowload fadeInRight">
      <p class="nombreReceta">¿Buscando ideas? Síguenos, encontrarás las mejores recetas, fáciles de preparar y con los mejores consejos.</p>
