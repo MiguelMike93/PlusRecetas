@@ -1,4 +1,7 @@
-body {	color:#333;	font:300 15px/15px Roboto,Arial,Helvetica;background:url(../images/bg.jpg) right no-repeat fixed #fff; -webkit-font-smoothing:antialiased;}
+body {	color:#333;	font:300 15px/15px Roboto,Arial,Helvetica;
+	background:url(../images/bg.jpg) right no-repeat fixed #fff; -webkit-font-smoothing:antialiased;
+
+}
 
 a{color:#00a9c6; text-decoration:none;}
 a:hover{color:#666;}
@@ -17,7 +20,7 @@ h3{font:300 2em Roboto,Arial,Helvetica;margin:2em 0 1em 0;}
 h4{font:300 1.5em Roboto,Arial,Helvetica;margin-bottom: 1em;}
 h4 i{margin-right: 0.5em;}
 
-p{font-size:1em;line-height: 1.7em; margin-bottom: 1.7em;}
+p{font-size:1em;line-height: 1.7em; margin-bottom: 1.7em;font-weight:bold;}
 
 .recipe-body{background: url(../images/fondo.jpg);}
 .image_block {

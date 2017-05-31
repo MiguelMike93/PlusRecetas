@@ -107,8 +107,10 @@ window.__lo_site_id = 83921;
 
 
 <!-- Recetas nuevas -->
-<div id="menu"  class="container spacer about">
-<h1 class="text-center wowload fadeInUp">Recetas Nuevas</h1>
+<div >
+<div id="menu"  class="container spacer about" STYLE="opacity:0.7">
+<h1 class="text-center wowload fadeInUp" STYLE="background-color:#F5EAFC">Recetas Nuevas</h1>
+</div>
 <p>
 
 
@@ -186,7 +188,7 @@ window.__lo_site_id = 83921;
   -->
 <!-- Categorías -->
   <div class="col-sm-6 wowload fadeInRight">
-     <p class="nombreReceta">¿Buscando ideas? Síguenos, encontrarás las mejores recetas, fáciles de preparar y con los mejores consejos.</p>
+     <p class="nombreReceta" STYLE="background-color:#F5EAFC;opacity:0.7" >¿Buscando ideas? Síguenos, encontrarás las mejores recetas, fáciles de preparar y con los mejores consejos.</p>
       <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
   <div class="panel panel-primary">
     <div class="panel-heading" role="tab">
