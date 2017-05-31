@@ -120,10 +120,10 @@ while($reg=mysql_fetch_array($registro)){
 </div>
     <div class="col-md-4">
     <p align="justify">
-    <div id="preparacion">
-    <h2><i class="fa fa-camera-retro"></i> Preparación</h2>    
+    <div id="preparacion" STYLE="background-color:#F5EAFC;opacity:0.8">
+    <h2 >Preparación</h2>    
      <?php 
-          echo '<p>'.$preparacion.'</p>';
+          echo '<p align="justify" style=" font: Arial;font-weight: 600;">'.$preparacion.'</p>';
           ?>       
   </div>
   </p>
