@@ -75,10 +75,10 @@ window.__lo_site_id = 83921;
 <p>
 <?php
 $var=$_GET['variable'];
-  $host = "localhost";
-    $username = "root";
-    $db = "epiz_19830617_recetasPlusdb";
-    $pass = "";
+  $host = "sql313.epizy.com";
+$username = "epiz_19830617";
+$db = "epiz_19830617_recetasPlusdb";
+$pass = "miguel1993";
 // Create connection
 $conn= mysql_connect($host, $username, $pass) or die("Error al buscar la infor");
 mysql_select_db($db, $conn) or die("No funciona");
@@ -135,11 +135,10 @@ while($reg=mysql_fetch_array($registro)){
        <label for="name"><h2>Comentarios</h2></label><br />
    <?php
 $var=$_GET['variable'];
-    $host = "localhost";
-    $username = "root";
-    $db = "epiz_19830617_recetasPlusdb";
-    $pass = "";
-// Create connection
+    $host = "sql313.epizy.com";
+$username = "epiz_19830617";
+$db = "epiz_19830617_recetasPlusdb";
+$pass = "miguel1993";
 $conn= mysql_connect($host, $username, $pass) or die("Error al buscar la infor");
 mysql_select_db($db, $conn) or die("No canciona");
 $registro=mysql_query("SELECT NOMBRE_USUARIO, DESCRIPCION FROM COMENTARIOS where id_receta=".$var) or die("No funnciona" .mysql_error());
