@@ -39,25 +39,15 @@ window.__lo_site_id = 83921;
 </head>
 
 <body class="recipe-body">
-
-  
-                   
-  <div id="fb-root"></div>
-         
-<div class="topbar animated fadeInLeftBig"></div>
-
-<!-- Header Starts -->
+<div id="contenedorto">
 <div class="navbar-wrapper">
       <div class="container">
-
         <div class="navbar navbar-inverse navbar-fixed-top" role="navigation" id="top-nav">
           <div class="container">
             <div class="navbar-header">
               <!-- Logo Starts -->
               <a class="navbar-brand" href="index.php"><img src="images/Logo.png" alt="logo"></a>
               <!-- #Logo Ends -->
-
-
               <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
                 <span class="sr-only">Toggle navigation</span>
                 <span class="icon-bar"></span>
@@ -66,16 +56,9 @@ window.__lo_site_id = 83921;
               </button>
 
             </div>
-
-
-            <!-- Nav Starts -->
             <div class="navbar-collapse  collapse">
               <ul class="nav navbar-nav navbar-right scroll">
-                 <li class="active"><a href="index.php">Inicio</a></li>
-                 <!--li ><a href="#menu">Menú</a></li>
-                 <li ><a href="#foods">Recetas</a></li>
-                 <!--<li ><a href="#partners">Partners</a></li>-->
-                 <!--<li ><a href="#contact">Contact</a></li>-->
+                 <li class="active"><a href="index.html">Inicio</a></li>
               </ul>
             </div>
             <!-- #Nav Ends -->
@@ -86,18 +69,19 @@ window.__lo_site_id = 83921;
       </div>
     </div>
 <!-- #Header Starts -->
-
-
 <div id="menu"  class="container spacer about">
+<div class="row">
+<div class="col-md-4">
+<p>
 <?php
 $var=$_GET['variable'];
-$host = "sql313.epizy.com";
-$username = "epiz_19830617";
-$db = "epiz_19830617_recetasPlusdb";
-$pass = "miguel1993";
+  $host = "localhost";
+    $username = "root";
+    $db = "epiz_19830617_recetasPlusdb";
+    $pass = "";
 // Create connection
 $conn= mysql_connect($host, $username, $pass) or die("Error al buscar la infor");
-mysql_select_db($db, $conn) or die("No canciona");
+mysql_select_db($db, $conn) or die("No funciona");
 $registro=mysql_query("SELECT NOMBRE_RECETA,INGREDIENTE,PREPARACION,IMAGEN_RECETA FROM RECETAS where id_receta=".$var) or die("No canciona" .mysql_error());
 $name=$registro['NOMBRE_RECETA'];
 while($reg=mysql_fetch_array($registro)){
@@ -113,12 +97,14 @@ while($reg=mysql_fetch_array($registro)){
   echo '<h2>'.$name.'</h2>';
   
   ?>
-  <title><?php echo $name;?></title>
-  </p>
-  <div class="row">
-  <div class="col-sm-6 wowload fadeInLeft">
-  <div class="image_block" id="image" style="background-image: url('<?php echo $imagen;?>') , url('images/alternative.jpg');background-repeat: no-repeat;background-size:100% 100%;width: 550px; height: 400px;"> </div>
-   <h2>Ingredientes </h2>
+  <div class="image_block" id="image"> <img src=<?php echo $imagen;?> alt="logo"></div>
+  </p>  
+
+</div>
+<div class="col-md-4">
+<p align="justify">
+ <div id="ingredientes">
+     <h2>Ingredientes </h2>
       <nav>
       <ul>        
           <?php 
@@ -128,34 +114,31 @@ while($reg=mysql_fetch_array($registro)){
           }
           ?>        
         </ul>
-      </nav>
-    <h2><i class="fa fa-camera-retro"></i> Preparación</h2>
-    <p id="preparacion" >
+      </nav>  
+</div>
+</p>
+</div>
+    <div class="col-md-4">
+    <p align="justify">
+    <div id="preparacion">
+    <h2><i class="fa fa-camera-retro"></i> Preparación</h2>    
      <?php 
           echo '<p>'.$preparacion.'</p>';
-          ?>
-        </p>
+          ?>       
   </div>
-  <div id="comentarios">
-<form id="contact_form" action="coments.php" method="POST">
+  </p>
+  </div>
+  </div>
   <div class="row">
-    <label for="name"><h3>Deja aquí tu comentario</h3></label><br />
-    <label for="name">Tu nombre:</label><br />
-    <input id="name" class="input" name="Comentario[usuario]" type="text" value="" size="30" /><br />
-<!--<input id="id" type="hidden" name="idreceta" value=1>-->
-    <input id="receta" class="input" type="hidden" name="Comentario[receta]" value="<?php echo (isset($_GET['variable']))?$_GET['variable']:'' ?>" />
-    <label for="message">Tu mensaje:</label><br />
-    <textarea id="com" class="input" name="Comentario[descripcion]" cols="28" rows="10"></textarea>
-   
-  </div>
-  <input id="submit_button" type="submit" name="enviar" value="Enviar" />
-</form>
- <?php
+    <div class="col-md-4">
+       <div id="recetasto">
+       <label for="name"><h2>Comentarios</h2></label><br />
+   <?php
 $var=$_GET['variable'];
-$host = "sql313.epizy.com";
-$username = "epiz_19830617";
-$db = "epiz_19830617_recetasPlusdb";
-$pass = "miguel1993";
+    $host = "localhost";
+    $username = "root";
+    $db = "epiz_19830617_recetasPlusdb";
+    $pass = "";
 // Create connection
 $conn= mysql_connect($host, $username, $pass) or die("Error al buscar la infor");
 mysql_select_db($db, $conn) or die("No canciona");
@@ -164,16 +147,40 @@ while($reg=mysql_fetch_array($registro)){
   $name=$reg['NOMBRE_USUARIO'];
   $descripcion=$reg['DESCRIPCION'];
   ?>
-  <div class="receta">
+  <div id="receta">
    <!-- <h2 class="usuario_nombre"><?php echo $name; ?> Comentó</h2>-->
-    <label for="usuario_nombre"><?php echo $name; ?> comentó:</label><br />
-    <label for="comentario_desc">  <?php echo $descripcion; ?></label><br />
-     <hr>
-  <!--  <h4 class="receta_descripcion"><?php echo $descripcion; ?></h4>-->
+
+    <label for="usuario_nombre"><?php echo $name; ?> comentó</label><br />
+    <label for="comentario_desc"><?php echo $descripcion; ?></label><br />
+    <hr>
   </div>
 <?php } ?>
-<br />
+</div> 
+
+    </div>
+    <div class="col-md-2"></div>
+    <div class="col-md-5">
+  <div class="right">
+<div id="comentarios">
+<form id="contact_form" action="coments.php" method="POST">
+    <label for="name"><h2>Deja aquí tu comentario</h2></label><br />
+    <label for="name">Tu nombre:</label><br />
+    <input id="name" class="input" name="Comentario[usuario]" type="text" value="" size="30" /><br />
+<!--<input id="id" type="hidden" name="idreceta" value=1>-->
+    <input id="receta" class="input" type="hidden" name="Comentario[receta]" value="<?php echo (isset($_GET['variable']))?$_GET['variable']:'' ?>" />
+    <label for="message">Tu mensaje:</label><br />
+    <textarea id="com" class="input" name="Comentario[descripcion]" cols="28" rows="10"></textarea>   
+  <br>
+  <input id="submit_button" type="submit" name="enviar" value="Enviar" />
+</form>
 </div>
+</div>
+    </div>
+  </div>
+
+ 
+  </div>
+  
 </div>
 </div>
   <!-- Footer Starts -->
@@ -182,5 +189,6 @@ while($reg=mysql_fetch_array($registro)){
   Copyright 2017 DevStudio. All rights reserved.
   </div>
   <!-- # Footer Ends -->
+  </div>
 </body>
 </html>

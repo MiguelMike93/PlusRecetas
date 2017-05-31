@@ -6,17 +6,50 @@
   left : 390px;
   top  : 285px;
 }
-
+#contendorto{
+  width: 700;
+}
+#menu{
+  width: 700;
+}
 #message {
   position: absolute;
   left : 20px;
   top  : 70px;
 }
-div#comentarios{
+.right{
 float: right;
-background-color: rgba(206,195,195,0.5);
-width: 300px;
-height: 700px;
+font-size:1em;
+font-family:monospace, Arial, Helvetica, sans-serif;
+font-weight: 500;
+background-color: rgba(249,243,342,0.5);
+width: 400px;
+height: 400px;
+}
+#ingredientes{
+  font-size:1.2em;
+}
+#name{
+ width: 400px;
+height: 40px; 
+}
+#preparacion{
+  background-color: rgba(249,243,342,0.5);
+  font-weight: 700;
+  text-align : justify;
+}
+#comentarios{
+  width: 300px;
+height: 300px;
+}
+#recetasto{
+width: 400px;
+height: 300px;
+overflow: auto; 
+}
+#com{
+ width: 400px;
+height: 40px; 
 }
 form { 
 	margin-top: 20px
@@ -25,7 +58,7 @@ form {
 	width: 300px; 
 	
 } 
-label { 
+label {
 	
 	font-family:monospace, Arial, Helvetica, sans-serif; 
 	color: black; display: block; 
