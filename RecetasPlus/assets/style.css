@@ -29,17 +29,6 @@ p{font-size:1em;line-height: 1.7em; margin-bottom: 1.7em;}
 	border-radius:2px;
 	margin:10px 0 15px 0;
 }
-
-.categoria-body{background: url(../images/fondo.jpg);}
-.image_block {
-	position:relative;
-	border:1px solid #cccccc;
-	padding:5px 5px 0 5px;
-	-webkit-border-radius:2px;
-	-moz-border-radius:2px;
-	border-radius:2px;
-	margin:10px 0 15px 0;
-}
 .image_block img {
 	width:100%;
 }
