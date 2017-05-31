@@ -117,7 +117,7 @@ while($reg=mysql_fetch_array($registro)){
   </p>
   <div class="row">
   <div class="col-sm-6 wowload fadeInLeft">
-  <div class="image_block" id="image"> <img src=<?php echo $imagen;?> alt="logo"></div>
+  <div class="image_block" id="image" style="background-image: url('<?php echo $imagen;?>') , url('images/alternative.jpg');background-repeat: no-repeat;background-size:100% 100%;width: 550px; height: 400px;"> </div>
    <h2>Ingredientes </h2>
       <nav>
       <ul>        

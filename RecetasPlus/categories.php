@@ -88,8 +88,8 @@ window.__lo_site_id = 83921;
      <div class="col-sm-4 wowload fadeInLeft">
       <div class="thumbnail slideInRight">
         <a href="recipe1.php?variable=<?php echo $reg['ID_RECETA']; ?>">
-          <img class="animated slideInRight" src="<?php echo $reg['IMAGEN_RECETA']?>">
-           <div class="caption">
+          <div style="background-image: url('<?php echo $reg['IMAGEN_RECETA']?>') , url('images/alternative.jpg');background-repeat: no-repeat;background-size:100% 100%;width: 300px; height: 200px;"></div>
+          <div class="caption">
             <p class="nombreReceta"><?php echo $reg['NOMBRE_RECETA']; ?></p>
           </div>
         </a>
