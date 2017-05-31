@@ -98,12 +98,9 @@ window.__lo_site_id = 83921;
     <?php }
     ?>
     </div>
-      <!-- Footer Starts -->
-  <div class="footer text-center spacer">
-  Copyright 2017 DevStudio. All rights reserved.
-  </div>
-  <!-- # Footer Ends -->
+   
     </div>
+  </div>
     <!--
 
     
@@ -182,6 +179,10 @@ window.__lo_site_id = 83921;
     </div>
   </div>
 -->
-
+   <!-- Footer Starts -->
+  <div id="footer" class="footer text-center spacer">
+  Copyright 2017 DevStudio. All rights reserved.
+  </div>
+  <!-- # Footer Ends -->
 </body>
 </html>
