@@ -184,7 +184,7 @@ window.__lo_site_id = 83921;
   </div>
 -->
 <!-- Footer Starts -->
-<div class="footer text-center spacer" style="width:100%">
+<div id="footer" class="footer text-center spacer">
 
     Copyright 2017 DevStudio. All rights reserved.
 </div>
