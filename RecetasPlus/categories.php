@@ -80,7 +80,7 @@ window.__lo_site_id = 83921;
     <p>
       
     </p>
-    <h1 class="animated bounceInUp" align="center"><?php echo $var; ?></h1>
+    <h1 class="animated bounceInUp" align="center"  STYLE="background-color:#F5EAFC;opacity:0.8"><?php echo $var; ?></h1>
     <p>
       
     </p><?php 
