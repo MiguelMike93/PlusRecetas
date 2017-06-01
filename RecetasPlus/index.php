@@ -208,10 +208,10 @@ window.__lo_site_id = 83921;
 
 
 <!-- Recetas nuevas -->
-<div >
+
 <div id="menu"  class="container spacer about" STYLE="opacity:0.7">
 <h1 class="text-center wowload fadeInUp" STYLE="background-color:#F5EAFC">Recetas Nuevas</h1>
-</div>
+
 <p>
 
 
