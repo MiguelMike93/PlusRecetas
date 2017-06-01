@@ -208,8 +208,7 @@ window.__lo_site_id = 83921;
 
 
 <!-- Recetas nuevas -->
-
-<div id="menu"  class="container spacer about" STYLE="opacity:0.7">
+<div id="menu"  class="container spacer about" STYLE="opacity:0.9">
 <h1 class="text-center wowload fadeInUp" STYLE="background-color:#F5EAFC">Recetas Nuevas</h1>
 
 <p>
@@ -218,7 +217,7 @@ window.__lo_site_id = 83921;
 
 </p>
   <div class="row">
-  <div class="col-sm-6 wowload fadeInLeft">
+  <div class="col-sm-4 wowload fadeInLeft">
     <h4><i class="fa fa-camera-retro"></i> Recetas Nuevas </h4>
     <?php
     $host = "sql313.epizy.com";
@@ -229,17 +228,37 @@ window.__lo_site_id = 83921;
     $cont=0;
     $conn= mysql_connect($host, $username, $pass) or die("Error al buscar la infor");
     mysql_select_db($db, $conn) or die("No canciona");
-    $registro=mysql_query("SELECT ID_RECETA,NOMBRE_RECETA FROM RECETAS LIMIT 20 OFFSET 4") or die("No canciona" .mysql_error());
+    $registro=mysql_query("SELECT ID_RECETA,IMAGEN_RECETA,NOMBRE_RECETA FROM RECETAS LIMIT 20 OFFSET 4") or die("No canciona" .mysql_error());
     while($reg=mysql_fetch_array($registro)){ ?>
+          
         <a href="recipe1.php?variable=<?php echo $reg['ID_RECETA']; ?>">
-          <p>
-            <h4><?php echo $reg['NOMBRE_RECETA']; ?></h4>
-          </p>
+          <div class="w3-content" style="max-width:400px" >
+            <img class="mySlides" src="<?php echo $reg['IMAGEN_RECETA']; ?>" alt="<?php echo $reg['NOMBRE_RECETA']; ?>" style="width:100%">
+          </div>
           </a>
+          
     <?php }
     mysql_close($conn);
     ?>
   </div>
+
+       <script>
+    var slideIndex = 0;
+    carousel();
+
+    function carousel() {
+        var i;
+        var x = document.getElementsByClassName("mySlides");
+        for (i = 0; i < x.length; i++) {
+          x[i].style.display = "none"; 
+        }
+        slideIndex++;
+        if (slideIndex > x.length) {slideIndex = 1} 
+        x[slideIndex-1].style.display = "block"; 
+        setTimeout(carousel, 4000); 
+    }
+    </script>
+
   <!--
   <div class="col-sm-12 wowload fadeInLeft">
   <div id="myCarousel" class="carousel slide" data-ride="carousel">
@@ -289,7 +308,7 @@ window.__lo_site_id = 83921;
   -->
 <!-- Categorías -->
   <div class="col-sm-6 wowload fadeInRight">
-     <p class="nombreReceta" STYLE="background-color:#F5EAFC;opacity:0.7" >¿Buscando ideas? Síguenos, encontrarás las mejores recetas, fáciles de preparar y con los mejores consejos.</p>
+     <p class="nombreReceta" STYLE="background-color:#F5EAFC;opacity:0.8" >¿Buscando ideas? Síguenos, encontrarás las mejores recetas, fáciles de preparar y con los mejores consejos.</p>
       <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
   <div class="panel panel-primary">
     <div class="panel-heading" role="tab">
