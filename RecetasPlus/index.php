@@ -233,7 +233,7 @@ window.__lo_site_id = 83921;
           
         <a href="recipe1.php?variable=<?php echo $reg['ID_RECETA']; ?>">
           <div class="w3-content" style="max-width:400px" >
-            <img class="mySlides" src="<?php echo $reg['IMAGEN_RECETA']; ?>" alt="<?php echo $reg['NOMBRE_RECETA']; ?>" style="width:100%">
+            <img class="mySlides" src="<?php echo $reg['IMAGEN_RECETA']; ?>" style="width:100%">
           </div>
           </a>
           
@@ -255,7 +255,7 @@ window.__lo_site_id = 83921;
         slideIndex++;
         if (slideIndex > x.length) {slideIndex = 1} 
         x[slideIndex-1].style.display = "block"; 
-        setTimeout(carousel, 4000); 
+        setTimeout(carousel, 3000); 
     }
     </script>
 
