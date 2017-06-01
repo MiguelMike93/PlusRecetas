@@ -13,7 +13,6 @@
 	 	$receta=$_POST['Comentario']['receta'];
 	 	$dificultad= $_POST['select1'];
 	 	$precio=$_POST['select'];
-	 	var_dump(".$receta.");
 	 	if($dificultad=="1"){
 	 		$sqlqueryetiquetadif = "UPDATE RECETAS SET ETIQUETA_FACIL=IFNULL(ETIQUETA_FACIL,0) + 1  WHERE ID_RECETA=".$receta."";
 	 	}
