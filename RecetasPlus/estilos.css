@@ -64,6 +64,10 @@ label {
 	font-family:helvetica; 
 	color: black; 
  } 
+ #detalles{
+  font-weight: 700;
+  text-align : justify;
+}
   label#facil{
   color:rgb(162,141,219);
  }
