@@ -206,23 +206,21 @@ while($reg=mysql_fetch_array($registro)){
     <div class="col-md-4">
   <div class="right">
 <form id="contact_form" action="coments.php" method="POST">
-    <label id="deja" for="name">Deja aquí tu comentario y cuentanos tus reacciones</label>
+    <label id="deja" for="deja">Deja aquí tu comentario y cuentanos tus reacciones</label>
     <br></br>
     <label id="dificultad" for="dificultad">Dificultad de aplicación</label><br>
-    </br>
     <select id="select1" name="select1">
-  <option id="difi" value="1" selected>Fácil</option> 
-  <option id="difi" value="2" >Difícil</option><br>
+  <option id="difi1" value="1" selected>Fácil</option> 
+  <option id="difi2" value="2" >Difícil</option><br>
   </select>
   <br></br>
   <label id="precio" for="precio">Precio</label>
   <br>
   <select name="select">
-  <option value="3" selected>Económico</option> 
-  <option value="4" >Costoso</option>
-
+  <option value="value1" selected>Económico</option> 
+  <option value="value2" >Costoso</option>
   </select>
-  <br></br>
+  <br>
     <label for="name">Tu nombre:</label><br />
     <input id="name" class="input" name="Comentario[usuario]" type="text" value="" size="30" /><br />
 <!--<input id="id" type="hidden" name="idreceta" value=1>-->
