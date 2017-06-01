@@ -217,8 +217,8 @@ while($reg=mysql_fetch_array($registro)){
   <label id="precio" for="precio">Precio</label>
   <br>
   <select name="select">
-  <option value="value1" selected>Económico</option> 
-  <option value="value2" >Costoso</option>
+  <option value="3" selected>Económico</option> 
+  <option value="4" >Costoso</option>
   </select>
   <br>
     <label for="name">Tu nombre:</label><br />
