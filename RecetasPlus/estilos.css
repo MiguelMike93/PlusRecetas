@@ -12,6 +12,9 @@
 #menu{
   width: 700;
 }
+#receta{
+  height: 70px;
+}
 #message {
   position: absolute;
   left : 20px;
@@ -20,36 +23,33 @@
 .right{
 float: right;
 font-size:1em;
-font-family:monospace, Arial, Helvetica, sans-serif;
+font-family:helvetica;
 font-weight: 500;
-background-color: rgba(249,243,342,0.5);
 width: 400px;
 height: 400px;
 }
 #ingredientes{
   font-size:1.2em;
 }
-#name{
- width: 400px;
-height: 40px; 
-}
+
 #preparacion{
-  background-color: rgba(249,243,342,0.5);
   font-weight: 700;
   text-align : justify;
 }
-#comentarios{
-  width: 300px;
-height: 300px;
+#contenedorto{
+  background-color: rgba(249,243,342,0.5);
 }
 #recetasto{
-width: 400px;
-height: 300px;
+width: 300px;
+height: 400px;
 overflow: auto; 
 }
 #com{
- width: 400px;
+ width: 300px;
 height: 40px; 
+}
+#difi{
+  font-family: Arial;
 }
 form { 
 	margin-top: 20px
@@ -59,10 +59,33 @@ form {
 	
 } 
 label {
-	
-	font-family:monospace, Arial, Helvetica, sans-serif; 
-	color: black; display: block; 
+	height: 20px;
+  width: 300px;
+	font-family:helvetica; 
+	color: black; 
  } 
+  label#facil{
+  color:rgb(192,172,247);
+ }
+ label#dificil{
+  color:rgb(238,178,146);
+ }
+ label#economico{
+  color:rgb(189,219,172);
+ }
+ label#costoso{
+  color:rgb(140,195,203);
+ }
+ label#deja{
+  color:rgb(194,29,98);
+  font-size: 16pt;
+   }
+    label#precio{
+  font-size: 15pt;
+   }
+   label#dificultad{
+  font-size: 15pt;
+   }
  label#usuario_nombre{
  	font-size:100px;
  }

@@ -157,12 +157,68 @@ while($reg=mysql_fetch_array($registro)){
 </div> 
 
     </div>
-    <div class="col-md-2"></div>
+    <div class="col-md-4">
+      <?php
+$var=$_GET['variable'];
+     $host = "sql313.epizy.com";
+$username = "epiz_19830617";
+$db = "epiz_19830617_recetasPlusdb";
+$pass = "miguel1993";
+// Create connection
+$conn= mysql_connect($host, $username, $pass) or die("Error al buscar la infor");
+mysql_select_db($db, $conn) or die("No canciona");
+$registro=mysql_query("SELECT ETIQUETA_FACIL,ETIQUETA_DIFICIL, ETIQUETA_COSTOSO, ETIQUETA_ECONOMICO  FROM RECETAS where id_receta=".$var) or die("No funnciona" .mysql_error());
+while($reg=mysql_fetch_array($registro)){
+  $facil=$reg['ETIQUETA_FACIL'];
+  $dificil=$reg['ETIQUETA_DIFICIL'];
+  $economico=$reg['ETIQUETA_ECONOMICO'];
+  $costoso=$reg['ETIQUETA_COSTOSO'];
+  if($facil==NULL){
+    $facil=0;
+  }
+  if($dificil==NULL){
+    $dificil=0;
+  }
+  if($economico==NULL){
+    $economico=0;
+  }
+  if($costoso==NULL){
+    $costoso=0;
+  }
+  ?>
+  <div id="receta">
+  <label for="name"><h2>Reacciones</h2></label>
+  <br></br>
+    <label id="facil" for="facil"><?php echo $facil; ?> personas creen que esta receta es facil</label><br />
+    <label id="dificil" for="dificil"><?php echo $dificil; ?> personas creen que esta receta es dificil</label><br />
+    <label id="economico" for="economico"><?php echo $economico; ?> personas creen que esta receta es economica</label><br />
+    <label id="costoso" for="costoso"><?php echo $costoso; ?> personas creen que esta receta es costosa</label><br />
+    
+    
+  </div>
+
+<?php } ?>
     <div class="col-md-5">
   <div class="right">
 <div id="comentarios">
 <form id="contact_form" action="coments.php" method="POST">
-    <label for="name"><h2>Deja aquí tu comentario</h2></label><br />
+    <label id="deja" for="name">Deja aquí tu comentario y cuentanos tus reacciones</label>
+    <br></br>
+    <label id="dificultad" for="dificultad">Dificultad de aplicación</label><br>
+    </br>
+    <select id="select1" name="select1">
+  <option id="difi" value="1" selected>Fácil</option> 
+  <option id="difi" value="2" >Difícil</option><br>
+  </select>
+  <br></br>
+  <label id="precio" for="precio">Precio</label>
+  <br>
+  <select name="select">
+  <option value="3" selected>Económico</option> 
+  <option value="4" >Costoso</option>
+
+  </select>
+  <br></br>
     <label for="name">Tu nombre:</label><br />
     <input id="name" class="input" name="Comentario[usuario]" type="text" value="" size="30" /><br />
 <!--<input id="id" type="hidden" name="idreceta" value=1>-->
