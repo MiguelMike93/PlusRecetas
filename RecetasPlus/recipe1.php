@@ -116,29 +116,34 @@ while($reg=mysql_fetch_array($registro)){
         </ul>
       </nav>  
 </div>
+
 </p>
 </div>
     <div class="col-md-4">
     <p align="justify">
-    <div id="preparacion" STYLE="background-color:#F5EAFC;opacity:0.8">
-    <h2 >Preparación</h2>    
+    <div id="preparacion">
+    <h2><i class="fa fa-camera-retro"></i> Preparación</h2>    
      <?php 
-          echo '<p align="justify" style=" font: Arial;font-weight: 600;">'.$preparacion.'</p>';
+          echo '<p>'.$preparacion.'</p>';
           ?>       
   </div>
   </p>
   </div>
   </div>
+  <div class="row"></div>
   <div class="row">
     <div class="col-md-4">
-       <div id="recetasto">
-       <label for="name"><h2>Comentarios</h2></label><br />
+    <div id=comen>
+       <label for="name"><h2>Comentarios</h2></label>
+       <br></br>
+       <div id="recetasto">      
    <?php
 $var=$_GET['variable'];
-    $host = "sql313.epizy.com";
+  $host = "sql313.epizy.com";
 $username = "epiz_19830617";
 $db = "epiz_19830617_recetasPlusdb";
 $pass = "miguel1993";
+// Create connection
 $conn= mysql_connect($host, $username, $pass) or die("Error al buscar la infor");
 mysql_select_db($db, $conn) or die("No canciona");
 $registro=mysql_query("SELECT NOMBRE_USUARIO, DESCRIPCION FROM COMENTARIOS where id_receta=".$var) or die("No funnciona" .mysql_error());
@@ -147,12 +152,11 @@ while($reg=mysql_fetch_array($registro)){
   $descripcion=$reg['DESCRIPCION'];
   ?>
   <div id="receta">
-   <!-- <h2 class="usuario_nombre"><?php echo $name; ?> Comentó</h2>-->
-
     <label for="usuario_nombre"><?php echo $name; ?> comentó</label><br />
     <label for="comentario_desc"><?php echo $descripcion; ?></label><br />
-    <hr>
+    
   </div>
+
 <?php } ?>
 </div> 
 </div>
@@ -160,7 +164,7 @@ while($reg=mysql_fetch_array($registro)){
     <div class="col-md-4">
       <?php
 $var=$_GET['variable'];
-     $host = "sql313.epizy.com";
+  $host = "sql313.epizy.com";
 $username = "epiz_19830617";
 $db = "epiz_19830617_recetasPlusdb";
 $pass = "miguel1993";
@@ -198,10 +202,9 @@ while($reg=mysql_fetch_array($registro)){
   </div>
 
 <?php } ?>
-</div>
-    <div class="col-md-5">
+    </div>
+    <div class="col-md-4">
   <div class="right">
-<div id="comentarios">
 <form id="contact_form" action="coments.php" method="POST">
     <label id="deja" for="name">Deja aquí tu comentario y cuentanos tus reacciones</label>
     <br></br>
@@ -230,13 +233,10 @@ while($reg=mysql_fetch_array($registro)){
   <input id="submit_button" type="submit" name="enviar" value="Enviar" />
 </form>
 </div>
-</div>
     </div>
-  </div>
-
- 
-  </div>
-  
+  </div> 
+  <div class="row"></div>
+  </div>  
 </div>
 </div>
   <!-- Footer Starts -->
