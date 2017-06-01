@@ -10,13 +10,29 @@
 	 	
 	 	$usuario = $_POST['Comentario']['usuario'];
 	 	$descripcion = $_POST['Comentario']['descripcion'];
-	 	$receta=$_POST['Comentario']['receta'];
-	 	
-	 	//var_dump($_POST['Comentario']);
-
+	 	$receta=$_POST['Comentario']['receta'];$dificultad= $_POST['select1'];
+	 	$precio=$_POST['select'];
+	 	var_dump(".$receta.");
+	 	if($dificultad=="1"){
+	 		$sqlqueryetiqueta = "UPDATE RECETAS SET ETIQUETA_FACIL=IFNULL(ETIQUETA_FACIL,0) + 1  WHERE ID_RECETA=".$receta."";
+	 	}
+	 	if($dificultad=="2"){
+	 		$sqlqueryetiqueta = "UPDATE RECETAS SET ETIQUETA_DIFICIL=IFNULL(ETIQUETA_DIFICIL,0) + 1  WHERE ID_RECETA=".$receta."";
+	 	}
+	 	if($precio=="4"){
+	 		$sqlqueryetiqueta = "UPDATE RECETAS SET ETIQUETA_COSTOSO=IFNULL(ETIQUETA_COSTOSO,0) + 1  WHERE ID_RECETA=".$receta."";
+	 	}
+	 	if($precio=="3"){
+	 		$sqlqueryetiqueta = "UPDATE RECETAS SET ETIQUETA_ECONOMICO=IFNULL(ETIQUETA_ECONOMICO,0) + 1  WHERE ID_RECETA=".$receta."";
+	 	}
 	 	$sqlqueryreceta = "INSERT INTO COMENTARIOS (DESCRIPCION, NOMBRE_USUARIO, ID_RECETA) VALUES ('$descripcion', '$usuario', ".$receta.")";
 		$insertarComentarios = mysql_query($sqlqueryreceta);
+		$insertarEtiqueta = mysql_query($sqlqueryetiqueta);
 		if (!$insertarComentarios) {
+			$mensaje = mysql_error();
+			die($mensaje);
+		}
+		if (!$insertarEtiqueta) {
 			$mensaje = mysql_error();
 			die($mensaje);
 		}
