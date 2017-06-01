@@ -13,9 +13,8 @@
 	 	$categoria = $_POST['categorias'];
 	 	$ingredientes = $_POST['ingredientes'];
 	 	$preparacion = $_POST['preparacion'];
-
-	 	$sqlqueryuser = "INSERT INTO USUARIOS (NOMBRE_USUARIO) VALUES('$usuario')";
-	 	$sqlqueryreceta = "INSERT INTO RECETAS (NOMBRE_RECETA,INGREDIENTE,IMAGEN_RECETA,PREPARACION,TIPO_RECETA) VALUES ('$receta','$ingredientes','$imagen','$preparacion','$categoria')";
+		$sqlqueryuser = "INSERT INTO USUARIOS (NOMBRE_USUARIO) VALUES('$usuario')";
+		$sqlqueryreceta = "INSERT INTO RECETAS (NOMBRE_RECETA,INGREDIENTE,IMAGEN_RECETA,PREPARACION,TIPO_RECETA) VALUES ('$receta','$ingredientes','$imagen','preparacion','$categoria')";
 		$insertarReceta = mysql_query($sqlqueryreceta);
 		$insertarUsuario = mysql_query($sqlqueryuser);
 		if (!$insertarReceta) {
@@ -24,6 +23,7 @@
 		}if (!$insertarUsuario) {
 			$mensaje2 = mysql_error();
 			die($mensaje2);
-		}header("Location: http://www.recetas.epizy.com");
+		}echo '<script language="javascript">alert("Receta guardada!");</script>'; 
+		echo '<script language="javascript">location.href="index.php";</script>';
 	 } 
 ?>
