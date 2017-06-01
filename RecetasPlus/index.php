@@ -3,6 +3,12 @@
 <head>
 <meta charset="UTF-8" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Recetas,Comida,Recetasplus,Bebidas,Postres,Entradas">
+<meta name="description" content="pagina de recetas donde puedes contarnos tu experiencia">
+<meta name="robots" content="index, follow">
+<meta http-equiv="content-language" content="es">
+<meta http-equiv="revisit-after" content="1 days">
+
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 <title>RecetasPlus</title>
 
