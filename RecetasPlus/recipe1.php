@@ -155,7 +155,7 @@ while($reg=mysql_fetch_array($registro)){
   </div>
 <?php } ?>
 </div> 
-
+</div>
     </div>
     <div class="col-md-4">
       <?php
