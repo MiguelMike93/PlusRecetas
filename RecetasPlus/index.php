@@ -41,6 +41,101 @@ window.__lo_site_id = 83921;
 </head>
 
 <body>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/es_ES/sdk.js#xfbml=1&version=v2.9&appId=1881515535507230";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<script>
+  // This is called with the results from from FB.getLoginStatus().
+  function statusChangeCallback(response) {
+    console.log('statusChangeCallback');
+    console.log(response);
+    // The response object is returned with a status field that lets the
+    // app know the current login status of the person.
+    // Full docs on the response object can be found in the documentation
+    // for FB.getLoginStatus().
+    if (response.status === 'connected') {
+      // Logged into your app and Facebook.
+      testAPI();
+    } else {
+      // The person is not logged into your app or we are unable to tell.
+      document.getElementById('status').innerHTML = 'Inicia sesión';
+    }
+  }
+
+  // This function is called when someone finishes with the Login
+  // Button.  See the onlogin handler attached to it in the sample
+  // code below.
+  function checkLoginState() {
+    FB.getLoginStatus(function(response) {
+      statusChangeCallback(response);
+    });
+  }
+
+  window.fbAsyncInit = function() {
+  FB.init({
+    appId      : '1881515535507230',
+    //cookie     : true,  // enable cookies to allow the server to access 
+                        // the session
+    xfbml      : true,  // parse social plugins on this page
+    version    : 'v2.8' // use graph api version 2.8
+  });
+
+  // Now that we've initialized the JavaScript SDK, we call 
+  // FB.getLoginStatus().  This function gets the state of the
+  // person visiting this page and can return one of three states to
+  // the callback you provide.  They can be:
+  //
+  // 1. Logged into your app ('connected')
+  // 2. Logged into Facebook, but not your app ('not_authorized')
+  // 3. Not logged into Facebook and can't tell if they are logged into
+  //    your app or not.
+  //
+  // These three cases are handled in the callback function.
+    
+  FB.getLoginStatus(function(response) {
+    statusChangeCallback(response);
+  });
+
+  };
+
+  function logOut(){
+    FB.logout(function(response) {
+       alert('Se ha cerrado la sesión');
+       location.reload();
+       document.getElementById('user').value = '';
+       document.getElementById('face').style.display = 'inline';
+    });
+  };
+
+  // Load the SDK asynchronously
+  (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/sdk.js";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+
+  // Here we run a very simple test of the Graph API after login is
+  // successful.  See statusChangeCallback() for when this call is made.
+  function testAPI() {
+    console.log('Welcome!  Fetching your information.... ');
+    FB.api('/me', function(response) {
+      console.log('Successful login for: ' + response.name);
+      document.getElementById('user').value = response.name;
+      document.getElementById('user').title = 'Usuario de Facebook';
+      document.getElementById('face').style.display = 'none';
+      document.getElementById('status').innerHTML =
+        'Gracias por ingresar, ' + response.name + '!';
+    });
+  }
+</script>
+
 <div class="topbar animated fadeInLeftBig"></div>
 
 <!-- Header Starts -->
@@ -73,6 +168,7 @@ window.__lo_site_id = 83921;
                  <li ><a href="#foods">Recetas</a></li>
                  <!--<li ><a href="#partners">Partners</a></li>-->
                  <li ><a href="#contact">Envía tu receta</a></li>
+                 <li ><a href="#" onclick="logOut()">Cerrar sesión</a></li>
               </ul>
             </div>
             <!-- #Nav Ends -->
@@ -97,6 +193,11 @@ window.__lo_site_id = 83921;
               <i class="fa fa-coffee fa-5x animated bounceInDown"></i>
               <h1 class="animated bounceInUp">¡Aprende Con Nosotros!</h1>
               <p class="animated bounceInLeft">Miles de pruebas a un solo click, ven y comparte tu experiencia con nosotros.</p>
+              <p id="status" class="animated bounceInLeft"></p>
+              <!--<div class="fb-login-button" data-max-rows="1" data-size="large" data-button-type="continue_with" data-show-faces="false" data-auto-logout-link="false" data-use-continue-as="false" scope="public_profile,email" onlogin="checkLoginState();"></div>-->
+
+              <fb:login-button id="face" scope="public_profile,email" onlogin="checkLoginState();"></fb:login-button>
+              <fb:logout-button scope="public_profile,email" onlogin="logout();"></fb:logout-button>
              <a href="#menu" class="explore animated bounceInDown"><i class="fa fa-angle-down  fa-3x"></i></a>
               </div>
             </div>
@@ -294,8 +395,8 @@ window.__lo_site_id = 83921;
   <div class="row wowload fadeInLeftBig">
   <div class="col-sm-6 col-sm-offset-0 col-sm-12">
   <form method="POST" action="form.php">
-        <input class="form-control" type="text" pattern="^[a-zA-Z\s]*$" name="usuario" placeholder="Nombre" required>
-        <input class="form-control" type="text" pattern="^[a-zA-Z\s]*$" name="receta" placeholder="Nombre de la receta" required>
+         <input class="form-control" type="text" pattern="^[a-zA-Záéíóúñüàè\s]*$" name="usuario" placeholder="Nombre de usuario" id="user" title="Inicia sesión con Facebook" readonly required>
+        <input class="form-control" type="text" pattern="^[a-zA-Záéíóúñüàè\s]*$" name="receta" placeholder="Nombre de la receta" required>
         <input class="form-control" type="text" name="imagen" placeholder="URL de imagen de la receta" required>
         <select class="form-control" name="categorias">
           <option>Plato principal</option>
