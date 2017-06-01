@@ -198,6 +198,7 @@ while($reg=mysql_fetch_array($registro)){
   </div>
 
 <?php } ?>
+</div>
     <div class="col-md-5">
   <div class="right">
 <div id="comentarios">

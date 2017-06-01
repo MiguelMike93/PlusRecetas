@@ -65,16 +65,16 @@ label {
 	color: black; 
  } 
   label#facil{
-  color:rgb(192,172,247);
+  color:rgb(162,141,219);
  }
  label#dificil{
-  color:rgb(238,178,146);
+  color:rgb(220,152,114);
  }
  label#economico{
-  color:rgb(189,219,172);
+  color:rgb(133,174,109);
  }
  label#costoso{
-  color:rgb(140,195,203);
+  color:rgb(95,152,161);
  }
  label#deja{
   color:rgb(194,29,98);
