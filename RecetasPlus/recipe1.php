@@ -105,6 +105,7 @@ while($reg=mysql_fetch_array($registro)){
 <p align="justify">
  <div id="ingredientes">
      <h2>Ingredientes </h2>
+       <div id="detalles">
       <nav>
       <ul>        
           <?php 
@@ -115,6 +116,7 @@ while($reg=mysql_fetch_array($registro)){
           ?>        
         </ul>
       </nav>  
+      </div>
 </div>
 
 </p>
