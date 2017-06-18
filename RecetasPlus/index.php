@@ -203,7 +203,7 @@ window.__lo_site_id = 83921;
           <div class="input-group">
             <input type="text" class="form-control" placeholder="Busca tu receta..." name="input">
               <span class="input-group-btn">
-                <button class="btn btn-primary" type="button" name="buscar">Buscar</button>
+                <button class="btn btn-default" type="button" name="buscar">Buscar</button>
               </span>
             </div>
           </div>

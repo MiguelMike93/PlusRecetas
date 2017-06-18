@@ -40,7 +40,7 @@ p{font-size:1em;line-height: 1.7em; margin-bottom: 1.7em;font-weight:bold;}
 
 /*.btn{border:none;border-radius: 0;padding: 1em 4em;background: rgba(0,0,0,0.5);text-transform: uppercase;}*/
 .btn:hover,.btn:active{color: #fff;}
-.btn-default{color: #ccc;border: 1px solid #aaa;}
+/*.btn-default{color: #ccc;border: 1px solid #aaa;}*/
 .btn-default:hover,.btn-default:active{background: rgba(0,0,0,0.8);}
 .btn-primary{color: #fff;background:#666;width: 100%;outline: none;}
 .btn-primary:hover,.btn-primary:active,.btn-primary:focus{background:#333;box-shadow: none;}
