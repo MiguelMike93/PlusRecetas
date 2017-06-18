@@ -166,6 +166,7 @@ window.__lo_site_id = 83921;
             </div>
 
 
+
             <!-- Nav Starts -->
             <div class="navbar-collapse  collapse">
               <ul class="nav navbar-nav navbar-right scroll">
@@ -194,6 +195,19 @@ window.__lo_site_id = 83921;
 <div class="banner">
           <img src="images/back.jpg" alt="banner" class="img-responsive">
           <div class="caption">
+          <p>
+            
+          </p>
+          <form method="POST" action="buscar.php">
+          <div class="col-sm-4 col-sm-offset-7 col-sm-12">
+          <div class="input-group">
+            <input type="text" class="form-control" placeholder="Busca tu receta..." name="input">
+              <span class="input-group-btn">
+                <button class="btn btn-primary" type="button" name="buscar">Buscar</button>
+              </span>
+            </div>
+          </div>
+          </form>
             <div class="caption-wrapper">
               <div class="caption-info">
               <i class="fa fa-coffee fa-5x animated bounceInDown"></i>
