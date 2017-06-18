@@ -31,7 +31,31 @@
 <!-- favicon -->
 <link rel="shortcut icon" type="image/x-icon" href="/images/faviconRP.ico" />
 <link rel="icon" href="images/faviconRP.ico" type="image/x-icon">
+<link href="//cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.2/jquery-ui.css" rel="stylesheet"/>
+<link href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.2/css/bootstrap.css" rel="stylesheet"/>
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 
+<script type="text/javascript">
+  $(function() {
+  var availableTags = [
+    "ActionScript", "AppleScript", "Asp", "BASIC", "C", "C++",
+    "Clojure", "COBOL", "ColdFusion", "Erlang", "Fortran",
+    "Groovy", "Haskell", "Java", "JavaScript", "Lisp", "Perl",
+    "PHP", "Python", "Ruby", "Scala", "Scheme"
+  ];
+  
+  $("#input").autocomplete({
+    source: 'buscador.php',
+    select: function(event, ui){
+      $("#buscar").on("click",function(){
+        location.href="recipe1.php?variable=" +ui.item.idUsuario;
+        document.getElementById('input').innerHTML = '';
+      });
+    }
+  });
+});
+</script>
 
 <link rel="stylesheet" href="assets/style.css">
 <script type='text/javascript'>
@@ -198,16 +222,15 @@ window.__lo_site_id = 83921;
           <p>
             
           </p>
-          <form method="POST" action="buscar.php">
           <div class="col-sm-4 col-sm-offset-7 col-sm-12">
           <div class="input-group">
-            <input type="text" class="form-control" placeholder="Busca tu receta..." name="input">
+            <input id="input" type="text" class="form-control" placeholder="Busca tu receta..." name="input">
               <span class="input-group-btn">
-                <button class="btn btn-default" type="button" name="buscar">Buscar</button>
+                <button id="buscar" class="btn btn-default" name="buscar" onclick="">Buscar</button>
               </span>
             </div>
           </div>
-          </form>
+          <div id="recetas"></div>
             <div class="caption-wrapper">
               <div class="caption-info">
               <i class="fa fa-coffee fa-5x animated bounceInDown"></i>
@@ -481,6 +504,10 @@ Copyright 2017 DevStudio. All rights reserved.
 
 <!-- jquery -->
 <script src="assets/jquery.js"></script>
+<script src="assets/jquery-ui.js"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
 
 <!-- wow script -->
 <script src="assets/wow/wow.min.js"></script>
@@ -502,3 +529,5 @@ Copyright 2017 DevStudio. All rights reserved.
 
 </body>
 </html>
+
+  
