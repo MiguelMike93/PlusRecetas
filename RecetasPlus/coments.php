@@ -7,7 +7,10 @@
 		// Create connection
 		$conn= mysql_connect($host, $username, $pass) or die("Error en la conexion");
 		mysql_select_db($db, $conn) or die("Base de datos sin seleccionar");
-	 	
+	 	$destinatario="menibapi@gmail.com";
+	 	$asunto="notificacion";
+	 	$headers .= "From: RecetasPlus\r\n"; 
+	 	$mensaje="Tienes nuevas reacciones en tu receta, ingresa para ver que que hay de nuevo"
 	 	$usuario = $_POST['Comentario']['usuario'];
 	 	$descripcion = $_POST['Comentario']['descripcion'];
 	 	$receta=$_POST['Comentario']['receta'];
@@ -29,6 +32,7 @@
 		$insertarComentarios = mysql_query($sqlqueryreceta);
 		$insertarEtiqueta = mysql_query($sqlqueryetiqueta);
 		$insertarEtiquetadif = mysql_query($sqlqueryetiquetadif);
+		mail($destinatario,$asunto,$mensaje,$headers);
 		if (!$insertarComentarios) {
 			$mensaje = mysql_error();
 			die($mensaje);
