@@ -10,7 +10,7 @@
 <meta http-equiv="revisit-after" content="1 days">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<title>RecetasPlus</title>
+<title>RecetasPlusssssss</title>
 
 <!-- Google fonts -->
 <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,700' rel='stylesheet' type='text/css'>
