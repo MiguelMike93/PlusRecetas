@@ -138,12 +138,13 @@ window.__lo_site_id = 83921;
        alert('Se ha cerrado la sesión');
        location.reload();
        document.getElementById('user').value = '';
+       document.getElementById('email').value = '';
        document.getElementById('face').style.display = 'inline';
     });
   };
 
   // Load the SDK asynchronously
-  (function(d, s, id) {
+  (function(d, s, id) { 
     var js, fjs = d.getElementsByTagName(s)[0];
     if (d.getElementById(id)) return;
     js = d.createElement(s); js.id = id;
@@ -155,13 +156,16 @@ window.__lo_site_id = 83921;
   // successful.  See statusChangeCallback() for when this call is made.
   function testAPI() {
     console.log('Welcome!  Fetching your information.... ');
-    FB.api('/me', function(response) {
-      console.log('Successful login for: ' + response.name);
-      document.getElementById('user').value = response.name;
+    FB.api('/me', 'GET', {"fields":"email,first_name,last_name,id,gender"},
+      function(response) {
+      console.log('Successful login for: ' + response.name + response.email);
+      document.getElementById('user').value = response.first_name+' '+response.last_name;
       document.getElementById('user').title = 'Usuario de Facebook';
+      document.getElementById('email').value = response.email;
+      document.getElementById('email').title = 'Usuario de Facebook';
       document.getElementById('face').style.display = 'none';
       document.getElementById('status').innerHTML =
-        'Gracias por ingresar, ' + response.name + '!';
+        'Gracias por ingresar, ' + response.first_name+' '+response.last_name + '!';
     });
   }
 </script>
@@ -352,41 +356,31 @@ window.__lo_site_id = 83921;
 <!-- Categorías -->
   <div class="col-sm-6 wowload fadeInRight">
      <p class="nombreReceta" STYLE="background-color:#F5EAFC;opacity:0.8" >¿Buscando ideas? Síguenos, encontrarás las mejores recetas, fáciles de preparar y con los mejores consejos.</p>
-      <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-  <div class="panel panel-primary">
+  <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">    
+  <div class="panel btn-primary">
+    <div class="panel-heading" role="tab">
+      <button type="button" class="btn btn-primary" href="categories.php?variable=Plato principal">Platos Principales</button>
+    </div>
+  </div>
+  <div class="panel btn-primary">
     <div class="panel-heading" role="tab">
       <h4 class="panel-title">
-        <a href="categories.php?variable=Plato principal">
-         Platos Principales
-        </a>
+      <button type="button" class="btn btn-primary" href="categories.php?variable=Entrada">Entradas</button>
       </h4>
     </div>
   </div>
-  <div class="panel panel-info">
+  <div class="panel btn-primary">
     <div class="panel-heading" role="tab">
       <h4 class="panel-title">
-        <a href="categories.php?variable=Entrada">
-        Entradas
-        </a>
-      </h4>
-    </div>
-  </div>
-  <div class="panel panel-primary">
-    <div class="panel-heading" role="tab">
-      <h4 class="panel-title">
-        <a href="categories.php?variable=Bebida">
-        Bebidas
-        </a>
+      <button type="button" class="btn btn-primary" href="categories.php?variable=Bebida">Bebidas</button>
       </h4>
     </div>
   </div>
 
-  <div class="panel panel-info">
+  <div class="panel btn-primary">
     <div class="panel-heading" role="tab">
       <h4 class="panel-title">
-        <a href="categories.php?variable=Postre">
-        Postres
-        </a>
+      <button type="button" class="btn btn-primary" href="categories.php?variable=Postres">Postres</button>
       </h4>
     </div>
   </div>
@@ -458,6 +452,7 @@ window.__lo_site_id = 83921;
   <div class="col-sm-6 col-sm-offset-0 col-sm-12">
   <form method="POST" action="form.php">
          <input class="form-control" type="text" pattern="^[a-zA-Záéíóúñüàè\s]*$" name="usuario" placeholder="Nombre de usuario" id="user" title="Inicia sesión con Facebook" readonly required>
+         <input class="form-control" type="text" pattern="^[a-zA-Záéíóúñüàè\s]*$" name="usuario" placeholder="Correo de usuario" id="email" title="Inicia sesión con Facebook" readonly required>
         <input class="form-control" type="text" pattern="^[a-zA-Záéíóúñüàè\s]*$" name="receta" placeholder="Nombre de la receta" required>
         <input class="form-control" type="text" name="imagen" placeholder="URL de imagen de la receta" required>
         <select class="form-control" name="categorias">
