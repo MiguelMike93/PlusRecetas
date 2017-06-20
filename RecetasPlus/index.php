@@ -42,12 +42,14 @@ function log(a){
       var parametros = {"valor" : a};
       $.ajax({
                   data:  parametros,
-                  url:   'loger.php',
+                  url:   'RecetasPlus/loger.php',
                   type:  'post'
           });
       
   }
 
+
+  
   $(function() {
   var availableTags = [
     "ActionScript", "AppleScript", "Asp", "BASIC", "C", "C++",
