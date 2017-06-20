@@ -358,31 +358,33 @@ window.__lo_site_id = 83921;
      <p class="nombreReceta" STYLE="background-color:#F5EAFC;opacity:0.8" >¿Buscando ideas? Síguenos, encontrarás las mejores recetas, fáciles de preparar y con los mejores consejos.</p>
   <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">    
   <div class="panel btn-primary">
-    <div class="panel-heading" role="tab">
-      <button type="button" class="btn btn-primary" href="categories.php?variable=Plato principal">Platos Principales</button>
-    </div>
+    <div class="panel-heading" role="tab"><a href="categories.php?variable=Plato principal">
+      <h4 class="panel-title" align="center">
+        Platos Principales
+      </h4>
+    </a></div>
   </div>
   <div class="panel btn-primary">
-    <div class="panel-heading" role="tab">
-      <h4 class="panel-title">
-      <button type="button" class="btn btn-primary" href="categories.php?variable=Entrada">Entradas</button>
+    <div class="panel-heading" role="tab"><a href="categories.php?variable=Entrada">
+      <h4 class="panel-title" align="center">
+        Entradas
       </h4>
-    </div>
+    </a></div>
   </div>
   <div class="panel btn-primary">
-    <div class="panel-heading" role="tab">
-      <h4 class="panel-title">
-      <button type="button" class="btn btn-primary" href="categories.php?variable=Bebida">Bebidas</button>
+    <div class="panel-heading" role="tab"><a href="categories.php?variable=Bebida">
+      <h4 class="panel-title" align="center">
+        Bebidas
       </h4>
-    </div>
+    </a></div>
   </div>
 
   <div class="panel btn-primary">
-    <div class="panel-heading" role="tab">
-      <h4 class="panel-title">
-      <button type="button" class="btn btn-primary" href="categories.php?variable=Postres">Postres</button>
+    <div class="panel-heading" role="tab"><a href="categories.php?variable=Postre">
+      <h4 class="panel-title" align="center">
+        Postres
       </h4>
-    </div>
+    </a></div>
   </div>
 
 </div>

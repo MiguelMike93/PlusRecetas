@@ -58,7 +58,7 @@ window.__lo_site_id = 83921;
             </div>
             <div class="navbar-collapse  collapse">
               <ul class="nav navbar-nav navbar-right scroll">
-                 <li class="active"><a href="index.html">Inicio</a></li>
+                 <li class="active"><a href="index.php">Inicio</a></li>
               </ul>
             </div>
             <!-- #Nav Ends -->
