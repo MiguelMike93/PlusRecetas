@@ -37,6 +37,17 @@
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 
 <script type="text/javascript">
+
+function log(a){
+      var parametros = {"valor" : a};
+      $.ajax({
+                  data:  parametros,
+                  url:   'loger.php',
+                  type:  'post'
+          });
+      
+  }
+
   $(function() {
   var availableTags = [
     "ActionScript", "AppleScript", "Asp", "BASIC", "C", "C++",
@@ -170,6 +181,11 @@ window.__lo_site_id = 83921;
   }
 </script>
 
+ <?php   
+    include_once("logerIndex.php");
+    logIndex("index.php");
+  ?>
+
 <div class="topbar animated fadeInLeftBig"></div>
 
 <!-- Header Starts -->
@@ -230,7 +246,7 @@ window.__lo_site_id = 83921;
           <div class="input-group">
             <input id="input" type="text" class="form-control" placeholder="Busca tu receta..." name="input">
               <span class="input-group-btn">
-                <button  onclick="log('3')" id="buscar" class="btn btn-default" name="buscar" >Buscar</button>
+                <button  onclick="log('2')" id="buscar" class="btn btn-default" name="buscar" >Buscar</button>
               </span>
             </div>
           </div>
