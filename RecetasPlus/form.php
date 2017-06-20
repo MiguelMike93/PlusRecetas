@@ -13,8 +13,9 @@
 	 	$categoria = $_POST['categorias'];
 	 	$ingredientes = $_POST['ingredientes'];
 	 	$preparacion = $_POST['preparacion'];
+	 	$email=$_POST['email'];
 		$sqlqueryuser = "INSERT INTO USUARIOS (NOMBRE_USUARIO) VALUES('$usuario')";
-		$sqlqueryreceta = "INSERT INTO RECETAS (NOMBRE_RECETA,INGREDIENTE,IMAGEN_RECETA,PREPARACION,TIPO_RECETA) VALUES ('$receta','$ingredientes','$imagen','preparacion','$categoria')";
+		$sqlqueryreceta = "INSERT INTO RECETAS (NOMBRE_RECETA,INGREDIENTE,IMAGEN_RECETA,PREPARACION,TIPO_RECETA,EMAIL) VALUES ('$receta','$ingredientes','$imagen','preparacion','$categoria','$email')";
 		$insertarReceta = mysql_query($sqlqueryreceta);
 		$insertarUsuario = mysql_query($sqlqueryuser);
 		if (!$insertarReceta) {
