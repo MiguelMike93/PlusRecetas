@@ -41,6 +41,7 @@
 			die($mensaje);
 		}
 		header("Location: recipe1.php?variable=".$receta);
+		echo "Hola";
 	} 
 	else
 		header("Location: index.php");
