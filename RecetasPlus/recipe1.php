@@ -82,19 +82,22 @@ $pass = "miguel1993";
 // Create connection
 $conn= mysql_connect($host, $username, $pass) or die("Error al buscar la infor");
 mysql_select_db($db, $conn) or die("No funciona");
-$registro=mysql_query("SELECT NOMBRE_RECETA,INGREDIENTE,PREPARACION,IMAGEN_RECETA FROM RECETAS where id_receta=".$var) or die("No canciona" .mysql_error());
+$registro=mysql_query("SELECT NOMBRE_RECETA,INGREDIENTE,PREPARACION,IMAGEN_RECETA ,EMAIL FROM RECETAS where id_receta=".$var) or die("No canciona" .mysql_error());
 $name=$registro['NOMBRE_RECETA'];
+ $email=$registro['EMAIL'];
 while($reg=mysql_fetch_array($registro)){
   //echo $reg['NOMBRE_RECETA'];
   $name=$reg['NOMBRE_RECETA'];
   $Ingredientes=$reg['INGREDIENTE'];
   $preparacion=$reg['PREPARACION'];
   $imagen=$reg['IMAGEN_RECETA'];
+  $email=$reg['EMAIL'];
 }
 ?>
  <?php
   
   echo '<h2>'.$name.'</h2>';
+  echo '<h2>'.$email.'</h2>';
   
   ?>
   <div class="image_block" id="image"> <img src=<?php echo $imagen;?> alt="logo"></div>
