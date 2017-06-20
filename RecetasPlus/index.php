@@ -230,7 +230,7 @@ window.__lo_site_id = 83921;
           <div class="input-group">
             <input id="input" type="text" class="form-control" placeholder="Busca tu receta..." name="input">
               <span class="input-group-btn">
-                <button id="buscar" class="btn btn-default" name="buscar" onclick="">Buscar</button>
+                <button  onclick="log('3')" id="buscar" class="btn btn-default" name="buscar" >Buscar</button>
               </span>
             </div>
           </div>
@@ -358,21 +358,21 @@ window.__lo_site_id = 83921;
      <p class="nombreReceta" STYLE="background-color:#F5EAFC;opacity:0.8" >¿Buscando ideas? Síguenos, encontrarás las mejores recetas, fáciles de preparar y con los mejores consejos.</p>
   <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">    
   <div class="panel btn-primary">
-    <div class="panel-heading" role="tab"><a href="categories.php?variable=Plato principal">
+    <div class="panel-heading" role="tab"><a  onclick="log('3')" href="categories.php?variable=Plato principal">
       <h4 class="panel-title" align="center">
         Platos Principales
       </h4>
     </a></div>
   </div>
   <div class="panel btn-primary">
-    <div class="panel-heading" role="tab"><a href="categories.php?variable=Entrada">
+    <div class="panel-heading" role="tab"><a  onclick="log('3')" href="categories.php?variable=Entrada">
       <h4 class="panel-title" align="center">
         Entradas
       </h4>
     </a></div>
   </div>
   <div class="panel btn-primary">
-    <div class="panel-heading" role="tab"><a href="categories.php?variable=Bebida">
+    <div class="panel-heading" role="tab"><a  onclick="log('3')" href="categories.php?variable=Bebida">
       <h4 class="panel-title" align="center">
         Bebidas
       </h4>
@@ -380,7 +380,7 @@ window.__lo_site_id = 83921;
   </div>
 
   <div class="panel btn-primary">
-    <div class="panel-heading" role="tab"><a href="categories.php?variable=Postre">
+    <div class="panel-heading" role="tab"><a  onclick="log('3')" href="categories.php?variable=Postre">
       <h4 class="panel-title" align="center">
         Postres
       </h4>
@@ -479,7 +479,7 @@ window.__lo_site_id = 83921;
 Copyright 2017 DevStudio. All rights reserved.
 </div>
 <!-- # Footer Ends -->
-<a href="#home" class="gototop "><img src="images/faviconRP.ico"><i class="fa fa-angle-up  fa-3x"></i></a>
+<a  onclick="log('1')"  href="#home" class="gototop "><img src="images/faviconRP.ico"><i class="fa fa-angle-up  fa-3x"></i></a>
 
 
 
